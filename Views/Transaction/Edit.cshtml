@@ -1,0 +1,71 @@
+﻿@model ExpenseTracker.Models.Transaction
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="row">
+    <div class="col-md-6 col-lg-6 offset-lg-3 card p-5 mt-3 bg-light">
+        <h4 class="text-center text-dark py-2">Edit Transaction</h4>
+        <hr />
+        <form asp-action="Edit" enctype="multipart/form-data" class="text-start">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TransactionId" />
+            <div class="form-group mb-3 text-dark">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 text-dark">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 text-dark">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            @* <div class="form-group"> *@
+            @*     <label asp-for="ImagePath" class="control-label"></label> *@
+            @*     <input asp-for="ImagePath" class="form-control" /> *@
+            @*     <span asp-validation-for="ImagePath" class="text-danger"></span> *@
+            @* </div> *@
+            <div class="form-group mb-3 text-dark">
+                <label asp-for="ImagePath" class="control-label"></label>
+                <div class="mb-3">
+                    <img src="@Url.Content(Model.ImagePath)" alt="Transaction Image" width="100" height="100"/>
+                </div>
+                <input type="file" name="ImageFile" class="form-control" />
+                <input type="hidden" name="ImagePath" value="@Model.ImagePath" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 text-dark">
+                <label asp-for="PaymentMethod" class="control-label"></label>
+                <input asp-for="PaymentMethod" class="form-control" />
+                <span asp-validation-for="PaymentMethod" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 text-dark">
+                <label asp-for="Note" class="control-label"></label>
+                <input asp-for="Note" class="form-control" />
+                <span asp-validation-for="Note" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 text-dark">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+            </div>
+             @* <div class="text-danger">  *@
+             @*    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))  *@
+             @*     {  *@
+             @*         <p>@error.ErrorMessage</p>  *@
+             @*     }  *@
+             @* </div> *@
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

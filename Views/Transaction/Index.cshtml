@@ -1,0 +1,167 @@
+﻿@model IEnumerable<ExpenseTracker.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Index";
+    var currentPage = ViewBag.CurrentPage ?? 1;
+    var totalPages = ViewBag.TotalPages ?? 1;
+    
+}
+@if (TempData["CreateTransaction"] != null)
+{
+    <div class="alert alert-Success alert-dismissible fade show" role="alert">
+        @TempData["Create"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+else if (TempData["UpdateTransaction"] != null)
+{
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        @TempData["Update"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+else if (TempData["DeleteTransaction"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["Delete"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-10 col-lg-10 offset-lg-1 card p-5 bg-light">
+
+        <div class="row mb-3">
+            <div class="col-6 d-flex justify-content-start">
+                <h1 class="text-center py-2 text-dark">Transactions</h1>
+            </div>
+            <div class=" col-6 d-flex justify-content-end pe-10 py-3">
+                <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> &nbsp; Transaction</a>
+            </div>
+        </div>
+        <div class="row mt-3">
+    <table class="table text-start">
+        <thead class="table-success">
+            <tr>
+                <th>Category</th>
+                <th>@Html.DisplayNameFor(model => model.Amount)</th>
+                <th>@Html.DisplayNameFor(model => model.Date)</th>
+                <th>Image</th>
+                <th>@Html.DisplayNameFor(model => model.PaymentMethod)</th>
+                <th>@Html.DisplayNameFor(model => model.Note)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Category.TitleWithIcon)</td>
+                <td>
+                    @if (item.Category.Type == "Income")
+                    {
+                        <span class="text-success">+@item.Amount 円</span>
+                    }
+                    else
+                    {
+                        <span class="text-danger">-@item.Amount 円</span>
+                    }
+                </td>
+                <td>@item.Date.ToString("yyyy-MM-dd")</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImagePath))
+                    {
+                        <img src="@item.ImagePath" alt="Transaction Image" width="70" height="70" />
+                    }
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.PaymentMethod)</td>
+                <td>@Html.DisplayFor(modelItem => item.Note)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TransactionId" class="text-danger">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.TransactionId" class="btn btn-sm text-decoration-none text-danger">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    @if (ViewBag.TotalItems > 7) 
+    {
+        <nav class="pt-3">
+            <ul class="pagination justify-content-end">
+                <!-- Previous Page -->
+                @if (ViewBag.CurrentPage > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link"
+                           asp-action="Index"
+                           asp-route-pageNumber="@(ViewBag.CurrentPage - 1)"
+                           asp-route-pageSize="@ViewBag.PageSize"
+                           asp-route-startDate="@ViewBag.StartDate"
+                           asp-route-endDate="@ViewBag.EndDate">&lt;</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled">
+                        <span class="page-link">&lt;</span>
+                    </li>
+                }
+
+                <!-- Page Numbers -->
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    if (i == ViewBag.CurrentPage)
+                    {
+                        <li class="page-item active">
+                            <span class="page-link">@i</span>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item">
+                            <a class="page-link"
+                               asp-action="Index"
+                               asp-route-pageNumber="@i"
+                               asp-route-pageSize="@ViewBag.PageSize"
+                               asp-route-startDate="@ViewBag.StartDate"
+                               asp-route-endDate="@ViewBag.EndDate">@i</a>
+                        </li>
+                    }
+                }
+
+                <!-- Next Page -->
+                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                {
+                    <li class="page-item">
+                        <a class="page-link"
+                           asp-action="Index"
+                           asp-route-pageNumber="@(ViewBag.CurrentPage + 1)"
+                           asp-route-pageSize="@ViewBag.PageSize"
+                           asp-route-startDate="@ViewBag.StartDate"
+                           asp-route-endDate="@ViewBag.EndDate">&gt;</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled">
+                        <span class="page-link">&gt;</span>
+                    </li>
+                }
+                <li>
+                    <p class="text-center text-dark justify-content-center px-2 pt-2">
+                        (@ViewBag.TotalItems items)
+                    </p>
+                </li>
+            </ul>
+        </nav>
+    }
+</div>
+
+        </<div>
+        </div>

@@ -1,0 +1,74 @@
+html {
+  font-size: 14px;
+  position:relative;
+  font-family : "Inter";
+}
+
+*:not(.fa-solid):not(.fa){
+    font-family : "Inter";
+}
+
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: white;
+    color: black;
+}
+
+.custom-width {
+    width: 100%; 
+    align-items:center;
+}
+
+.sidebar {
+    background-color: #2d3748; 
+}
+
+.card {
+    background-color: #2d3748;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #e2e8f0;
+}
+.list-group-item {
+    border: none;
+    font-size: 18px;
+    color: #495057;
+    background-color: transparent;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+.chart-container {
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    padding: 20px;
+    height: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.chart-container canvas {
+   height: 500px;
+   width: 100%;
+}

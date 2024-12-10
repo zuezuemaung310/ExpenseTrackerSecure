@@ -1,0 +1,166 @@
+﻿@model IEnumerable<ExpenseTracker.Models.Category> 
+
+@{
+    ViewData["Title"] = "Index";
+    int totalPages = ViewBag.TotalPages;
+    int currentPage = ViewBag.CurrentPage;
+    int totalItems = ViewBag.TotalItems;
+}
+@if (TempData["Create"] != null)
+{
+    <div class="alert alert-Success alert-dismissible fade show" role="alert">
+        @TempData["Create"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+else if (TempData["Update"] != null)
+{
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        @TempData["Update"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+else if (TempData["Delete"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["Delete"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-6 col-lg-6 offset-lg-3 card p-5 bg-light">
+
+       <div class="row">
+            <div class="col-6 d-flex justify-content-start">
+                <h1 class="text-center py-2 text-dark">Categories</h1>
+            </div>
+            <div class=" col-6 d-flex justify-content-end pe-10 py-3">
+                <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> &nbsp; Category</a>
+            </div>
+       </div>
+        <div class="row mt-3">
+            <table class="table text-start">
+            <thead class="table-success">
+                <tr>
+                    <th>
+                        @* @Html.DisplayNameFor(model => model.Title) *@
+                        Category
+                    </th>
+                    
+                        @* @Html.DisplayNameFor(model => model.Icon) *@
+                   
+                    <th>
+                        @Html.DisplayNameFor(model => model.Type)
+                    </th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                <tr>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Icon)
+                            @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                  
+                        @* @Html.DisplayFor(modelItem => item.Type) *@
+                     <td>
+                          @if (item.Type == "Income")
+                              {
+                                <span class="badge bg-success">@item.Type</span>
+                              }
+                          else
+                              {
+                                <span class="badge bg-danger">@item.Type</span>
+                              }
+                     </td>
+   
+                    <td>
+                            <a asp-action="Edit" asp-route-id="@item.CategoryId" class="text-danger"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a asp-action="Delete" asp-route-id="@item.CategoryId"
+                               class="btn btn-sm text-decoration-none text-danger"> <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                     </td>
+                </tr>
+                }
+             </tbody>
+        </table>
+        </div>
+
+        <!-- Pagination -->
+    @if (ViewBag.TotalItems >7)   {
+        <nav class="pt-3">
+            <ul class="pagination justify-content-end">
+                <!-- Previous Page -->
+                @if (ViewBag.CurrentPage > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link"
+                           asp-action="Index"
+                           asp-route-pageNumber="@(ViewBag.CurrentPage - 1)"
+                           asp-route-pageSize="@ViewBag.PageSize"
+                           asp-route-startDate="@ViewBag.StartDate"
+                           asp-route-endDate="@ViewBag.EndDate">&lt;</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled">
+                        <span class="page-link">&lt;</span>
+                    </li>
+                }
+
+                <!-- Page Numbers -->
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    if (i == ViewBag.CurrentPage)
+                    {
+                        <li class="page-item active">
+                            <span class="page-link">@i</span>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item">
+                            <a class="page-link"
+                               asp-action="Index"
+                               asp-route-pageNumber="@i"
+                               asp-route-pageSize="@ViewBag.PageSize"
+                               asp-route-startDate="@ViewBag.StartDate"
+                               asp-route-endDate="@ViewBag.EndDate">@i</a>
+                        </li>
+                    }
+                }
+
+                <!-- Next Page -->
+                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                {
+                    <li class="page-item">
+                        <a class="page-link"
+                           asp-action="Index"
+                           asp-route-pageNumber="@(ViewBag.CurrentPage + 1)"
+                           asp-route-pageSize="@ViewBag.PageSize"
+                           asp-route-startDate="@ViewBag.StartDate"
+                           asp-route-endDate="@ViewBag.EndDate">&gt;</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="page-item disabled">
+                        <span class="page-link">&gt;</span>
+                    </li>
+                }
+                <li>
+                    <p class="text-center text-dark justify-content-center px-2 pt-2">
+                        (@ViewBag.TotalItems items)
+                    </p>
+                </li>
+            </ul>
+        </nav>
+    }
+</div>
+
+      
+    </<div>
+</div>

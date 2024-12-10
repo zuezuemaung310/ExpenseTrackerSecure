@@ -1,0 +1,65 @@
+﻿@model ExpenseTracker.Models.Transaction
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+    <div class="row">
+        <div class="col-md-6 col-lg-6 offset-lg-3 card p-5 mt-3 bg-light">
+            <h4 class="text-center text-dark py-2">Delete Transaction</h4>
+            <hr />
+
+        <dl class="row text-dark text-start">
+            <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+            <dd class = "col-sm-6">
+                @Html.DisplayFor(model => model.Category.TitleWithIcon)
+            </dd>
+            <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.Amount)
+            </dt>
+            <dd class = "col-sm-6">
+                @Html.DisplayFor(model => model.Amount) 円
+            </dd>
+            <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+            <dd class = "col-sm-6">
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+            <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </dt>
+            <dd class="col-sm-6">
+                <!-- Display the image -->
+                @if (!string.IsNullOrEmpty(Model.ImagePath))
+                {
+                    <img src="@Model.ImagePath" alt="Transaction Image" class="img-thumbnail" width="100" height="100" />
+                }
+                else
+                {
+                    <p>No image available</p>
+                }
+            </dd>
+            <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.PaymentMethod)
+            </dt>
+            <dd class = "col-sm-6">
+                @Html.DisplayFor(model => model.PaymentMethod)
+            </dd>
+            <dt class = "col-sm-4">
+                @Html.DisplayNameFor(model => model.Note)
+            </dt>
+            <dd class = "col-sm-6">
+                @Html.DisplayFor(model => model.Note)
+            </dd>
+        </dl>
+    
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="TransactionId" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> 
+            <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+        </form>
+    </div>
+</div>
