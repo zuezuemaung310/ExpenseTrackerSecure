@@ -1,0 +1,25 @@
+﻿@model Transaction
+
+<div>
+    <p><strong>Category:</strong> @Model.Category.TitleWithIcon</p>
+    <p><strong>Type:</strong> @Model.Category.Type</p>
+    <p>
+        <strong>Amount:</strong>
+        @if (Model.Category.Type == "Income")
+        {
+            <span class="text-success">+@Model.Amount 円</span>
+        }
+        else
+        {
+            <span class="text-danger">-@Model.Amount 円</span>
+        }
+    </p>
+    <p><strong>Date:</strong> @Model.Date.ToString("yyyy-MM-dd")</p>
+    <p><strong>Payment Method:</strong> @Model.PaymentMethod</p>
+    <p><strong>Note:</strong> @Model.Note</p>
+    @if (!string.IsNullOrEmpty(Model.ImagePath))
+    {
+        <p><strong>Image:</strong></p>
+        <img src="@Model.ImagePath" alt="Transaction Image" width="100" height="100" />
+    }
+</div>

@@ -8,7 +8,7 @@
 }
 @if (TempData["Create"] != null)
 {
-    <div class="alert alert-Success alert-dismissible fade show" role="alert">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
         @TempData["Create"]
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
@@ -39,6 +39,8 @@ else if (TempData["Delete"] != null)
                 <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> &nbsp; Category</a>
             </div>
        </div>
+
+       
         <div class="row mt-3">
             <table class="table text-start">
             <thead class="table-success">
@@ -46,10 +48,8 @@ else if (TempData["Delete"] != null)
                     <th>
                         @* @Html.DisplayNameFor(model => model.Title) *@
                         Category
-                    </th>
-                    
-                        @* @Html.DisplayNameFor(model => model.Icon) *@
-                   
+                    </th>               
+                        @* @Html.DisplayNameFor(model => model.Icon) *@             
                     <th>
                         @Html.DisplayNameFor(model => model.Type)
                     </th>
@@ -58,7 +58,7 @@ else if (TempData["Delete"] != null)
             </thead>
             <tbody>
                 @foreach (var item in Model) {
-                <tr>
+                <tr >
                     <td>
                             @Html.DisplayFor(modelItem => item.Icon)
                             @Html.DisplayFor(modelItem => item.Title)
@@ -81,15 +81,17 @@ else if (TempData["Delete"] != null)
                             <a asp-action="Delete" asp-route-id="@item.CategoryId"
                                class="btn btn-sm text-decoration-none text-danger"> <i class="fa-solid fa-trash-can"></i>
                             </a>
-                     </td>
+                           
+                    </td>
                 </tr>
                 }
              </tbody>
         </table>
+
         </div>
 
         <!-- Pagination -->
-    @if (ViewBag.TotalItems >7)   {
+    @if (ViewBag.TotalItems > 7)   {
         <nav class="pt-3">
             <ul class="pagination justify-content-end">
                 <!-- Previous Page -->

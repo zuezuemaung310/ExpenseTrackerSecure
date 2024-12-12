@@ -1,0 +1,15 @@
+﻿@model ExpenseTracker.Models.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Calendar";
+}
+
+<div id="custom-calendar">
+    <div id="calendar-header">
+        <button id="prev-month">Prev</button>
+        <span id="current-month">December 2024</span>
+        <button id="next-month">Next</button>
+    </div>
+    <div id="calendar-days"></div>
+    <button id="add-data-btn" class="floating-btn">+</button>
+</div>

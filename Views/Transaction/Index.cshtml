@@ -4,26 +4,25 @@
     ViewData["Title"] = "Index";
     var currentPage = ViewBag.CurrentPage ?? 1;
     var totalPages = ViewBag.TotalPages ?? 1;
-    
 }
 @if (TempData["CreateTransaction"] != null)
 {
-    <div class="alert alert-Success alert-dismissible fade show" role="alert">
-        @TempData["Create"]
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["CreateTransaction"]
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 }
 else if (TempData["UpdateTransaction"] != null)
 {
     <div class="alert alert-primary alert-dismissible fade show" role="alert">
-        @TempData["Update"]
+        @TempData["UpdateTransaction"]
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 }
 else if (TempData["DeleteTransaction"] != null)
 {
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        @TempData["Delete"]
+        @TempData["DeleteTransaction"]
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 }
@@ -39,55 +38,101 @@ else if (TempData["DeleteTransaction"] != null)
                 <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> &nbsp; Transaction</a>
             </div>
         </div>
+        <div class="row mb-3">
+            <div class="col-10">
+                <form method="get" action="" class="col-12 d-flex align-items-center">
+                    <div class="form-group d-flex px-3">
+                        <label for="startDate" class="text-dark text-start pt-2 px-2">Start_Date </label>
+                        <input type="date" name="startDate" id="startDate" class="form-control" />
+                    </div>
+
+                    <div class="form-group d-flex px-3">
+                        <label for="endDate" class="text-dark text-start pt-2 px-2">End_Date </label>
+                        <input type="date" name="endDate" id="endDate" class="form-control" />
+                    </div>
+
+                    <div class="form-group mr-4 px-3 ">
+                        <button type="submit" class="btn btn-primary px-3 d-inline">
+                            <i class="fa-solid fa-magnifying-glass text-white"></i>
+                        </button>
+                        <button type="submit" formaction="@Url.Action("Index", "Transaction")" class="btn btn-danger px-3 mx-3">
+                            <i class="fa-solid fa-trash-can text-white"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-2 ">
+                <form method="get" action="@Url.Action("DownloadExcel", "Transaction")" class="col-12 d-flex align-items-end ms-auto">
+                    <input type="hidden" name="startDate" value="@ViewBag.StartDate" />
+                     <input type="hidden" name="endDate" value="@ViewBag.EndDate" /> 
+                    <button type="submit" class="btn btn-success px-3 ms-1">
+                        <i class="fa-solid fa-download"></i>&nbsp; Download
+                    </button>
+                </form>
+            </div>
+        </div>
         <div class="row mt-3">
-    <table class="table text-start">
-        <thead class="table-success">
-            <tr>
-                <th>Category</th>
-                <th>@Html.DisplayNameFor(model => model.Amount)</th>
-                <th>@Html.DisplayNameFor(model => model.Date)</th>
-                <th>Image</th>
-                <th>@Html.DisplayNameFor(model => model.PaymentMethod)</th>
-                <th>@Html.DisplayNameFor(model => model.Note)</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-            <tr>
-                <td>@Html.DisplayFor(modelItem => item.Category.TitleWithIcon)</td>
-                <td>
-                    @if (item.Category.Type == "Income")
+            <table class="table text-start">
+                <thead class="table-success">
+                    <tr>
+                        <th>Category</th>
+                        <th>@Html.DisplayNameFor(model => model.Amount)</th>
+                        <th>@Html.DisplayNameFor(model => model.Date)</th>
+                        <th>Image</th>
+                        <th>@Html.DisplayNameFor(model => model.PaymentMethod)</th>
+                        <th>@Html.DisplayNameFor(model => model.Note)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
                     {
-                        <span class="text-success">+@item.Amount 円</span>
+                    <tr onclick="showTransactionDetails(@item.TransactionId)" style="cursor: pointer;">
+                        <td>@Html.DisplayFor(modelItem => item.Category.TitleWithIcon)</td>
+                        <td>
+                            @if (item.Category.Type == "Income")
+                            {
+                                <span class="text-success">+@item.Amount 円</span>
+                            }
+                            else
+                            {
+                                <span class="text-danger">-@item.Amount 円</span>
+                            }
+                        </td>
+                        <td>@item.Date.ToString("yyyy-MM-dd")</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.ImagePath))
+                            {
+                                <img src="@item.ImagePath" alt="Transaction Image" width="70" height="70" />
+                            }
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.PaymentMethod)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Note)</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.TransactionId" class="text-danger text-decoration-none">
+                               <i class="fa-solid fa-pen-to-square"></i> 
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.TransactionId" class="btn btn-sm text-danger">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </td>
+                    </tr>
                     }
-                    else
-                    {
-                        <span class="text-danger">-@item.Amount 円</span>
-                    }
-                </td>
-                <td>@item.Date.ToString("yyyy-MM-dd")</td>
-                <td>
-                    @if (!string.IsNullOrEmpty(item.ImagePath))
-                    {
-                        <img src="@item.ImagePath" alt="Transaction Image" width="70" height="70" />
-                    }
-                </td>
-                <td>@Html.DisplayFor(modelItem => item.PaymentMethod)</td>
-                <td>@Html.DisplayFor(modelItem => item.Note)</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.TransactionId" class="text-danger">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </a>
-                    <a asp-action="Delete" asp-route-id="@item.TransactionId" class="btn btn-sm text-decoration-none text-danger">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </a>
-                </td>
-            </tr>
-            }
-        </tbody>
-    </table>
+                </tbody>
+            </table>
+           
+            <div class="modal fade" id="transactionModal" tabindex="-1" aria-labelledby="transactionModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered ">
+                    <div class="modal-content">
+                        <div class="modal-header text-dark">
+                            <h5 class="modal-title" id="transactionModalLabel">Transaction Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-dark text-start" id="transactionDetails">                         
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     <!-- Pagination -->
     @if (ViewBag.TotalItems > 7) 
@@ -165,3 +210,24 @@ else if (TempData["DeleteTransaction"] != null)
 
         </<div>
         </div>
+
+
+        <script>
+               function showTransactionDetails(transactionId) {
+               
+                $.ajax({
+                    url: `/Transaction/Details/${transactionId}`, 
+                    type: 'GET',
+                    success: function (data) {
+                       
+                        $('#transactionDetails').html(data);
+                        
+                        $('#transactionModal').modal('show');
+                    },
+                    error: function () {
+                        alert('Failed to load transaction details. Please try again.');
+                    }
+                });
+            }
+
+        </script>

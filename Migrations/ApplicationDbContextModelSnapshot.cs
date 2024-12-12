@@ -112,6 +112,12 @@ namespace ExpenseTracker.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("EmailVerificationToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailVerified")
+                        .HasColumnType("bit");
+
                     b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
@@ -122,11 +128,20 @@ namespace ExpenseTracker.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PasswordResetToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("PasswordResetTokenExpires")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("RememberMe")
                         .HasColumnType("bit");
+
+                    b.Property<string>("ResetToken")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
                         .IsRequired()

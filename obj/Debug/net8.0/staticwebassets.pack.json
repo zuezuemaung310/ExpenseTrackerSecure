@@ -9,12 +9,20 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\466dd130-927e-41c1-863f-360a99ed3f63_wallpaper - Copy.jpg",
       "PackagePath": "staticwebassets\\images\\466dd130-927e-41c1-863f-360a99ed3f63_wallpaper - Copy.jpg"
+    },
+    {
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\63667fe1-b271-4514-9619-2e9e08371588_zue.jpg",
+      "PackagePath": "staticwebassets\\images\\63667fe1-b271-4514-9619-2e9e08371588_zue.jpg"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\9e98736f-7112-4623-a07e-b30ad25a2d77_zue.jpg",
@@ -33,24 +41,16 @@
       "PackagePath": "staticwebassets\\images\\file.png"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\home.png",
-      "PackagePath": "staticwebassets\\images\\home.png"
-    },
-    {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\japanese.jpg",
       "PackagePath": "staticwebassets\\images\\japanese.jpg"
-    },
-    {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\post.png",
-      "PackagePath": "staticwebassets\\images\\post.png"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\restaurant.png",
       "PackagePath": "staticwebassets\\images\\restaurant.png"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\travel.png",
-      "PackagePath": "staticwebassets\\images\\travel.png"
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\js\\calendar.js",
+      "PackagePath": "staticwebassets\\js\\calendar.js"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\js\\site.js",

@@ -15,8 +15,17 @@ namespace ExpenseTracker.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
+        public string? PasswordResetToken { get; set; }
+        public DateTime? PasswordResetTokenExpires { get; set; }
+
         [EmailAddress]
         public string Email { get; set; }
+
+        public string? EmailVerificationToken { get; set; }
+
+        public bool EmailVerified { get; set; } = false;
+
+        public string? ResetToken { get; set; }
 
         public bool RememberMe { get; set; }
         public string? Phone { get; set; } 
@@ -29,7 +38,6 @@ namespace ExpenseTracker.Models
 
         [NotMapped]
         public IFormFile? Image { get; set; } 
-
 
         public ICollection<Transaction>? Transactions { get; set; }
 

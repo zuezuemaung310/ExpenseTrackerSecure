@@ -1,5 +1,6 @@
 using ExpenseTracker.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -14,36 +15,37 @@ builder.Services.AddAuthentication("Cookies")
         options.SlidingExpiration = true;
     });
 
+builder.Services.AddSingleton<EmailSender>();
+
 builder.Services.AddControllersWithViews();
 
 // Add session services
 builder.Services.AddDistributedMemoryCache(); // Store session in memory
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout
-    options.Cookie.HttpOnly = true; // Set session cookie to be HttpOnly
-    options.Cookie.IsEssential = true; // Make the session cookie essential
+    options.IdleTimeout = TimeSpan.FromMinutes(30); 
+    options.Cookie.HttpOnly = true; 
+    options.Cookie.IsEssential = true; 
 });
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-//var emailConfig = builder.Configuration
-//    .GetSection("EmailConfiguration")
-//    .Get<EmailConfiguration>();
-//builder.Services.AddSingleton(emailConfig);
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage(); 
+}
+else
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
 }
+
+// Use status code pages for handling errors
+app.UseStatusCodePagesWithReExecute("/Error/NotFound");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

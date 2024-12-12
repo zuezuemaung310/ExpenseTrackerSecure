@@ -83,9 +83,23 @@ namespace ExpenseTracker.Controllers
                 .Include(t => t.Category)  // Include related category
                 .ToListAsync();
 
+            ViewBag.StartDate = startDate?.ToString("yyyy-MM-dd");
+            ViewBag.EndDate = endDate?.ToString("yyyy-MM-dd");
             return View(transactions);
         }
 
+        //Get Transaction Details with TransactionId
+        public async Task<IActionResult> Details(int id)
+        {
+            var transaction = await _context.Transactions
+                .Include(t => t.Category)
+                .FirstOrDefaultAsync(m => m.TransactionId == id);
+            if (transaction == null)
+            {
+                return NotFound();
+            }
+            return PartialView("_TransactionDetails", transaction);
+        }
 
         //Download Excel File
         public async Task<IActionResult> DownloadExcel(DateOnly? startDate = null, DateOnly? endDate = null)
@@ -106,12 +120,8 @@ namespace ExpenseTracker.Controllers
 
             if (userId == 0)
             {
-              
                 return NotFound();
             }
-
-            var startDate1 = Request.Query["startDate"].ToString();
-            var endDate1 = Request.Query["endDate"].ToString();
 
             var query = _context.Transactions.AsQueryable();
 
@@ -177,11 +187,13 @@ namespace ExpenseTracker.Controllers
 
             worksheet.Cells.AutoFitColumns();
 
-            var fileName = "";
-            if (!string.IsNullOrEmpty(startDate1) && !string.IsNullOrEmpty(endDate1))
+            //string fileName = startDate.HasValue && endDate.HasValue ? $"Transactions_{startDate.Value.ToString("yyyy-MM-dd")}_to_{endDate.Value.ToString("yyyy-MM-dd")}.xlsx" : "Transactions.xlsx";
+
+            string fileName;
+            if (startDate.HasValue && endDate.HasValue)
             {
-                var formattedStartDate = DateOnly.Parse(startDate1).ToString("yyyy-MM-dd");
-                var formattedEndDate = DateOnly.Parse(endDate1).ToString("yyyy-MM-dd");
+                var formattedStartDate = startDate.Value.ToString("yyyy-MM-dd");
+                var formattedEndDate = endDate.Value.ToString("yyyy-MM-dd");
                 fileName = $"Transactions_{formattedStartDate}_to_{formattedEndDate}.xlsx";
             }
             else
@@ -192,7 +204,6 @@ namespace ExpenseTracker.Controllers
             var contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
             return File(package.GetAsByteArray(), contentType, fileName);
         }
-
 
         // GET: Transaction/Create
         public IActionResult Create()

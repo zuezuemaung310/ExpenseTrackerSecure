@@ -93,7 +93,6 @@
             }
         });
 
-
         // Spline Chart (Income vs Expense Over Time)
         var splineCtx = document.getElementById('splineChart').getContext('2d');
         var splineChart = new Chart(splineCtx, {
@@ -104,43 +103,43 @@
                     {
                         label: 'Income',
                         data: @Html.Raw(Json.Serialize(Model.Transactions.Select(x => x.Income))),
-                        borderColor: '#3498DB', // Blue for income line
+                        borderColor: '#3498DB', 
                         backgroundColor: '#3498DB',
                         pointStyle: 'circle',
-                        pointRadius: 5, // Adjust point size
+                        pointRadius: 5, 
                         fill: false,
-                        tension: 0.4 // Curved line effect
+                        tension: 0.4 
                     },
                     {
                         label: 'Expense',
                         data: @Html.Raw(Json.Serialize(Model.Transactions.Select(x => x.Expense))),
-                        borderColor: '#FF5733', // Red for expense line
+                        borderColor: '#FF5733', 
                         backgroundColor: '#FF5733',
                         pointStyle: 'circle',
-                        pointRadius: 5, // Adjust point size
+                        pointRadius: 5, 
                         fill: false,
-                        tension: 0.4 // Curved line effect
+                        tension: 0.4
                     }
                 ]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false, // Allow flexible resizing
+                maintainAspectRatio: false, 
                 plugins: {
                     legend: {
                         display: true,
                         position: 'top',
                         labels: {
-                            usePointStyle: true, // Circle markers in the legend
+                            usePointStyle: true, 
                             font: {
                                 size: 14,
                                 weight: 'bold'
                             },
-                            color: '#000' // Dark text for legend
+                            color: '#000' 
                         }
                     },
                     tooltip: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Dark tooltip background
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)', 
                         titleFont: { size: 14, weight: 'bold' },
                         bodyFont: { size: 12 },
                         padding: 10,
@@ -155,23 +154,23 @@
                 scales: {
                     x: {
                         ticks: {
-                            color: '#000', // Dark tick labels
+                            color: '#000', 
                             font: { size: 12 }
                         },
                         grid: {
-                            color: 'rgba(0, 0, 0, 0.1)' // Light grid lines
+                            color: 'rgba(0, 0, 0, 0.1)' 
                         }
                     },
                     y: {
                         ticks: {
-                            color: '#000', // Dark tick labels
+                            color: '#000',
                             font: { size: 12 },
                             callback: function(value) {
-                                return value.toLocaleString(); // Add commas to values
+                                return value.toLocaleString();
                             }
                         },
                         grid: {
-                            color: 'rgba(0, 0, 0, 0.1)' // Light grid lines
+                            color: 'rgba(0, 0, 0, 0.1)' 
                         },
                         beginAtZero: true
                     }
