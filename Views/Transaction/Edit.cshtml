@@ -22,9 +22,14 @@
                 <input asp-for="Amount" class="form-control" />
                 <span asp-validation-for="Amount" class="text-danger"></span>
             </div>
+            @* <div class="form-group mb-3 text-dark"> *@
+            @*     <label asp-for="Date" class="control-label"></label> *@
+            @*     <input asp-for="Date" class="form-control" /> *@
+            @*     <span asp-validation-for="Date" class="text-danger"></span> *@
+            @* </div> *@
             <div class="form-group mb-3 text-dark">
                 <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
+                <input asp-for="Date" class="form-control" type="date" value="@Model.Date.ToString("yyyy-MM-dd")" />
                 <span asp-validation-for="Date" class="text-danger"></span>
             </div>
             @* <div class="form-group"> *@

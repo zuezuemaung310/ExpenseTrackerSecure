@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <!-- Report Content -->
+        
         <div class="row text-center">
             <!-- Total Income Card -->
             <div class="col-4">
@@ -35,7 +35,7 @@
                             <h4 class="mb-1">@Model.TotalIncome 円</h4>
                             <p class="mb-0">Total Income</p>
                         </div>
-                        <img src="/images/income.png" alt="Income Icon" style="width: 50px; height: 50px;" />
+                        <img src="/images/income.png" alt="Income Icon" style="width: 50px; height: 50px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                             <h4 class="mb-1">@Model.TotalExpense 円</h4>
                             <p class="mb-0">Total Expense</p>
                         </div>
-                        <img src="/images/expense.png" alt="Expense Icon" style="width: 50px; height: 50px;" />
+                        <img src="/images/expense.png" alt="Expense Icon" style="width: 50px; height: 50px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                             <h4 class="mb-1">@Model.TotalBalance 円</h4>
                             <p class="mb-0">Balance</p>
                         </div>
-                        <img src="/images/balance.png" alt="Balance Icon" style="width: 50px; height: 50px;" />
+                        <img src="/images/balance.png" alt="Balance Icon" style="width: 50px; height: 50px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
                     </div>
                 </div>
             </div>
@@ -78,11 +78,32 @@
         <div class="row">
             <!-- Pie Chart -->
             <div class="col-6">
-                <canvas id="expensePieChart"></canvas>
+                <!-- Check if there are any expenses -->
+                @if (Model.CategoryExpenses != null && Model.CategoryExpenses.Any(x => x.Amount > 0))
+                {
+                    <canvas id="expensePieChart"></canvas>
+                }
+                else
+                {
+                    <div class="d-flex justify-content-center align-items-center" style="height: 400px; border: 2px solid #ddd; border-radius: 15px; color: #6c757d;">
+                        <p class="text-center text-dark mb-0" style="font-size: 18px; font-weight: bold;">No expenses available.</p>
+                    </div>
+                }
             </div>
+
+
             <!-- Spline Chart -->
             <div class="col-6 chart-container pt-2">
-                <canvas id="splineChart"></canvas>
+                    @if (Model.Transactions != null && Model.Transactions.Any(t => t.Income > 0 || t.Expense > 0))
+                    {
+                        <canvas id="splineChart"></canvas>
+                    }
+                    else
+                    {
+                        <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                            <p class="text-center mb-0 text-black" style="font-size: 18px; font-weight: bold;">No income & expense data available.</p>
+                        </div>
+                    }
             </div>
         </div>
     </div>
@@ -127,7 +148,7 @@
             }
         });
 
-        // Spline Chart (Income vs Expense Over Time)
+        //Spline Chart (Income vs Expense)
         var splineCtx = document.getElementById('splineChart').getContext('2d');
         var splineChart = new Chart(splineCtx, {
             type: 'line',

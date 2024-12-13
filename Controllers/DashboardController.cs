@@ -40,32 +40,36 @@ namespace ExpenseTracker.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            // Set date range based on report type
+
             DateOnly startDate, endDate;
+            List<string> xAxisLabels = new();
+
             switch (reportType)
             {
                 case "Weekly":
                     startDate = DateOnly.FromDateTime(DateTime.Now.AddDays(-7));
                     endDate = DateOnly.FromDateTime(DateTime.Now);
+                    xAxisLabels = new List<string> { "Week 1", "Week 2", "Week 3", "Week 4" };
                     break;
 
                 case "Monthly":
                     startDate = new DateOnly(DateTime.Now.Year, DateTime.Now.Month, 1);
                     endDate = DateOnly.FromDateTime(DateTime.Now);
+                    xAxisLabels = new List<string> { "Week 1", "Week 2", "Week 3", "Week 4" };
                     break;
 
                 case "Yearly":
                     startDate = new DateOnly(DateTime.Now.Year, 1, 1);
                     endDate = DateOnly.FromDateTime(DateTime.Now);
+                    xAxisLabels = new List<string> { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
                     break;
 
-                default: // Summary Report (all-time)
+                default: // Summary Report 
                     startDate = DateOnly.MinValue;
                     endDate = DateOnly.FromDateTime(DateTime.Now);
                     break;
             }
 
-            // Get total income, expense, and balance for the selected period
             var totalIncome = await _context.Transactions
                 .Where(t => t.UserId == userId && t.Category.Type == "Income" && t.Date >= startDate && t.Date <= endDate)
                 .SumAsync(t => t.Amount);

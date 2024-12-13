@@ -10,7 +10,6 @@ using Org.BouncyCastle.Crypto.Macs;
 
 namespace ExpenseTracker.Controllers
 {
-
     public class AccountController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -87,9 +86,13 @@ namespace ExpenseTracker.Controllers
                 EnableSsl = true
             };
 
-            var message = new MailMessage("airiyuki123@gmail.com", email, subject, body)
+            var message = new MailMessage(
+             new MailAddress("airiyuki123@gmail.com", "Expense Tracker"),
+             new MailAddress(email))
             {
-                IsBodyHtml = true 
+                Subject = subject,
+                Body = body,
+                IsBodyHtml = true
             };
 
             await smtpClient.SendMailAsync(message);
@@ -161,7 +164,6 @@ namespace ExpenseTracker.Controllers
                 return View();
             }
 
-            // Email verified and password is correct, proceed with login
             HttpContext.Session.SetString("Username", username);
 
             user.RememberMe = rememberMe;
@@ -173,9 +175,9 @@ namespace ExpenseTracker.Controllers
                 // Set persistent "Remember Me" cookie
                 var cookieOptions = new CookieOptions
                 {
-                    Expires = DateTime.Now.AddDays(7), // Set cookie to expire in 7 days
-                    IsEssential = true, // Mark the cookie as essential
-                    HttpOnly = true // Make the cookie accessible only by the server
+                    Expires = DateTime.Now.AddDays(7), 
+                    IsEssential = true,
+                    HttpOnly = true 
                 };
                 Response.Cookies.Append("Username", username, cookieOptions); // Store the username in the cookie
             }
@@ -392,8 +394,12 @@ namespace ExpenseTracker.Controllers
                 EnableSsl = true
             };
 
-            var message = new MailMessage("airiyuki123@gmail.com", email, subject, body)
+            var message = new MailMessage(
+            new MailAddress("airiyuki123@gmail.com", "Expense Tracker"),
+            new MailAddress(email)) 
             {
+                Subject = subject,
+                Body = body,
                 IsBodyHtml = true
             };
             await smtpClient.SendMailAsync(message);
@@ -405,6 +411,14 @@ namespace ExpenseTracker.Controllers
             if (string.IsNullOrEmpty(token))
             {
                 TempData["Error"] = "Invalid or missing reset token.";
+                return RedirectToAction("ForgotPassword");
+            }
+
+            var user = _context.Users.FirstOrDefault(u => u.PasswordResetToken == token);
+            if (user == null || user.PasswordResetTokenExpires < DateTime.UtcNow)
+            {
+                // Token is invalid or expired
+                TempData["Error"] = "The password reset link has expired.";
                 return RedirectToAction("ForgotPassword");
             }
 
@@ -425,20 +439,19 @@ namespace ExpenseTracker.Controllers
                                                                    && u.PasswordResetTokenExpires > DateTime.UtcNow);
             if (user == null)
             {
-                TempData["Error"] = "Invalid or expired reset token.";
+                TempData["Error"] = "The password reset link has expired.";
                 return RedirectToAction("ForgotPassword");
             }
 
             // Update password
             user.Password = BCrypt.Net.BCrypt.HashPassword(model.NewPassword);
-            user.PasswordResetToken = null; // Clear the token
-            user.PasswordResetTokenExpires = null; // Clear the expiration
+            user.PasswordResetToken = null; 
+            user.PasswordResetTokenExpires = null; 
             await _context.SaveChangesAsync();
 
             TempData["Success"] = "Your password has been reset successfully.";
             return RedirectToAction("Login");
         }
-
 
         // Logout
         public async Task<IActionResult> Logout()
