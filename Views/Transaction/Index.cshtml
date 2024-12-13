@@ -28,8 +28,7 @@ else if (TempData["DeleteTransaction"] != null)
 }
 
 <div class="row">
-    <div class="col-md-10 col-lg-10 offset-lg-1 card p-5 bg-light">
-
+    <div class="col-md-10 col-lg-10 pb-5 px-5 offset-lg-1">
         <div class="row mb-3">
             <div class="col-6 d-flex justify-content-start">
                 <h1 class="text-center py-2 text-dark">Transactions</h1>
@@ -38,9 +37,10 @@ else if (TempData["DeleteTransaction"] != null)
                 <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> &nbsp; Transaction</a>
             </div>
         </div>
-        <div class="row mb-3">
-            <div class="col-10">
-                <form method="get" action="" class="col-12 d-flex align-items-center">
+
+        <div class="row pb-1">
+			<div class="col-11">
+                <form method="get" action="" class="col-12 d-flex align-items-center ">
                     <div class="form-group d-flex px-3">
                         <label for="startDate" class="text-dark text-start pt-2 px-2">Start_Date </label>
                         <input type="date" name="startDate" id="startDate" class="form-control" />
@@ -55,179 +55,203 @@ else if (TempData["DeleteTransaction"] != null)
                         <button type="submit" class="btn btn-primary px-3 d-inline">
                             <i class="fa-solid fa-magnifying-glass text-white"></i>
                         </button>
-                        <button type="submit" formaction="@Url.Action("Index", "Transaction")" class="btn btn-danger px-3 mx-3">
-                            <i class="fa-solid fa-trash-can text-white"></i>
-                        </button>
                     </div>
                 </form>
             </div>
-            <div class="col-2 ">
-                <form method="get" action="@Url.Action("DownloadExcel", "Transaction")" class="col-12 d-flex align-items-end ms-auto">
+            <div class="col-1 d-flex justify-content-start">   
+                <form method="get" action="@Url.Action("DownloadExcel", "Transaction")" >
                     <input type="hidden" name="startDate" value="@ViewBag.StartDate" />
-                     <input type="hidden" name="endDate" value="@ViewBag.EndDate" /> 
+                    <input type="hidden" name="endDate" value="@ViewBag.EndDate" /> 
                     <button type="submit" class="btn btn-success px-3 ms-1">
-                        <i class="fa-solid fa-download"></i>&nbsp; Download
+                        <i class="fa-solid fa-download"></i>
                     </button>
                 </form>
             </div>
         </div>
+
         <div class="row mt-3">
-            <table class="table text-start">
-                <thead class="table-success">
-                    <tr>
-                        <th>Category</th>
-                        <th>@Html.DisplayNameFor(model => model.Amount)</th>
-                        <th>@Html.DisplayNameFor(model => model.Date)</th>
-                        <th>Image</th>
-                        <th>@Html.DisplayNameFor(model => model.PaymentMethod)</th>
-                        <th>@Html.DisplayNameFor(model => model.Note)</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                    <tr onclick="showTransactionDetails(@item.TransactionId)" style="cursor: pointer;">
-                        <td>@Html.DisplayFor(modelItem => item.Category.TitleWithIcon)</td>
-                        <td>
-                            @if (item.Category.Type == "Income")
-                            {
-                                <span class="text-success">+@item.Amount 円</span>
-                            }
-                            else
-                            {
-                                <span class="text-danger">-@item.Amount 円</span>
-                            }
-                        </td>
-                        <td>@item.Date.ToString("yyyy-MM-dd")</td>
-                        <td>
-                            @if (!string.IsNullOrEmpty(item.ImagePath))
-                            {
-                                <img src="@item.ImagePath" alt="Transaction Image" width="70" height="70" />
-                            }
-                        </td>
-                        <td>@Html.DisplayFor(modelItem => item.PaymentMethod)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Note)</td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.TransactionId" class="text-danger text-decoration-none">
-                               <i class="fa-solid fa-pen-to-square"></i> 
-                            </a>
-                            <a asp-action="Delete" asp-route-id="@item.TransactionId" class="btn btn-sm text-danger">
-                                <i class="fa-solid fa-trash-can"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    }
-                </tbody>
-            </table>
-           
+            <form id="deleteForm" method="post" action="@Url.Action("DeleteSelected", "Transaction")"> 
+                <table class="table text-start">
+                    <thead class="table-success">
+                        <tr>
+                            <th>
+                                <button type="submit" class="btn text-danger" id="deleteSelectedBtn">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </th>
+                            <th>Category</th>
+                            <th>@Html.DisplayNameFor(model => model.Amount)</th>
+                            <th>@Html.DisplayNameFor(model => model.Date)</th>
+                            <th>Image</th>
+                            <th>@Html.DisplayNameFor(model => model.PaymentMethod)</th>
+                            <th>@Html.DisplayNameFor(model => model.Note)</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="transaction-row" data-id="@item.TransactionId" style="cursor: pointer;">
+
+                                <td>
+                                     <input type="checkbox" name="selectedTransactions" value="@item.TransactionId" class="transactionCheckbox" />
+                                </td>
+                                <td>@Html.DisplayFor(modelItem => item.Category.TitleWithIcon)</td>
+                                <td>
+                                    @if (item.Category.Type == "Income")
+                                    {
+                                        <span class="text-success">+@item.Amount 円</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">-@item.Amount 円</span>
+                                    }
+                                </td>
+                                <td>@item.Date.ToString("yyyy-MM-dd")</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.ImagePath))
+                                    {
+                                        <img src="@item.ImagePath" alt="Transaction Image" width="70" height="70" />
+                                    }
+                                </td>
+                                <td>@Html.DisplayFor(modelItem => item.PaymentMethod)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Note)</td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.TransactionId" class="text-danger text-decoration-none">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.TransactionId" class="btn btn-sm text-decoration-none text-danger">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+             </form> 
+
             <div class="modal fade" id="transactionModal" tabindex="-1" aria-labelledby="transactionModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered ">
+				<div class="modal-dialog modal-dialog-centered" >
                     <div class="modal-content">
                         <div class="modal-header text-dark">
                             <h5 class="modal-title" id="transactionModalLabel">Transaction Details</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body text-dark text-start" id="transactionDetails">                         
+                        <div class="modal-body text-dark text-start" id="transactionDetails">
                         </div>
                     </div>
                 </div>
             </div>
 
-    <!-- Pagination -->
-    @if (ViewBag.TotalItems > 7) 
-    {
-        <nav class="pt-3">
-            <ul class="pagination justify-content-end">
-                <!-- Previous Page -->
-                @if (ViewBag.CurrentPage > 1)
-                {
-                    <li class="page-item">
-                        <a class="page-link"
-                           asp-action="Index"
-                           asp-route-pageNumber="@(ViewBag.CurrentPage - 1)"
-                           asp-route-pageSize="@ViewBag.PageSize"
-                           asp-route-startDate="@ViewBag.StartDate"
-                           asp-route-endDate="@ViewBag.EndDate">&lt;</a>
-                    </li>
-                }
-                else
-                {
-                    <li class="page-item disabled">
-                        <span class="page-link">&lt;</span>
-                    </li>
-                }
 
-                <!-- Page Numbers -->
-                @for (int i = 1; i <= ViewBag.TotalPages; i++)
-                {
-                    if (i == ViewBag.CurrentPage)
-                    {
-                        <li class="page-item active">
-                            <span class="page-link">@i</span>
+            <!-- Pagination -->
+            @if (ViewBag.TotalItems > 8) 
+            {
+                <nav class="pt-3">
+                    <ul class="pagination justify-content-end">
+                        <!-- Previous Page -->
+                        @if (ViewBag.CurrentPage > 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link"
+                                   asp-action="Index"
+                                   asp-route-pageNumber="@(ViewBag.CurrentPage - 1)"
+                                   asp-route-pageSize="@ViewBag.PageSize"
+                                   asp-route-startDate="@ViewBag.StartDate"
+                                   asp-route-endDate="@ViewBag.EndDate">&lt;</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item disabled">
+                                <span class="page-link">&lt;</span>
+                            </li>
+                        }
+
+                        <!-- Page Numbers -->
+                        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                        {
+                            if (i == ViewBag.CurrentPage)
+                            {
+                                <li class="page-item active">
+                                    <span class="page-link">@i</span>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item">
+                                    <a class="page-link"
+                                       asp-action="Index"
+                                       asp-route-pageNumber="@i"
+                                       asp-route-pageSize="@ViewBag.PageSize"
+                                       asp-route-startDate="@ViewBag.StartDate"
+                                       asp-route-endDate="@ViewBag.EndDate">@i</a>
+                                </li>
+                            }
+                        }
+
+                        <!-- Next Page -->
+                        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                        {
+                            <li class="page-item">
+                                <a class="page-link"
+                                   asp-action="Index"
+                                   asp-route-pageNumber="@(ViewBag.CurrentPage + 1)"
+                                   asp-route-pageSize="@ViewBag.PageSize"
+                                   asp-route-startDate="@ViewBag.StartDate"
+                                   asp-route-endDate="@ViewBag.EndDate">&gt;</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item disabled">
+                                <span class="page-link">&gt;</span>
+                            </li>
+                        }
+                        <li>
+                            <p class="text-center text-dark justify-content-center px-2 pt-2">
+                                (@ViewBag.TotalItems items)
+                            </p>
                         </li>
-                    }
-                    else
-                    {
-                        <li class="page-item">
-                            <a class="page-link"
-                               asp-action="Index"
-                               asp-route-pageNumber="@i"
-                               asp-route-pageSize="@ViewBag.PageSize"
-                               asp-route-startDate="@ViewBag.StartDate"
-                               asp-route-endDate="@ViewBag.EndDate">@i</a>
-                        </li>
-                    }
-                }
-
-                <!-- Next Page -->
-                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
-                {
-                    <li class="page-item">
-                        <a class="page-link"
-                           asp-action="Index"
-                           asp-route-pageNumber="@(ViewBag.CurrentPage + 1)"
-                           asp-route-pageSize="@ViewBag.PageSize"
-                           asp-route-startDate="@ViewBag.StartDate"
-                           asp-route-endDate="@ViewBag.EndDate">&gt;</a>
-                    </li>
-                }
-                else
-                {
-                    <li class="page-item disabled">
-                        <span class="page-link">&gt;</span>
-                    </li>
-                }
-                <li>
-                    <p class="text-center text-dark justify-content-center px-2 pt-2">
-                        (@ViewBag.TotalItems items)
-                    </p>
-                </li>
-            </ul>
-        </nav>
-    }
-</div>
-
-        </<div>
+                    </ul>
+                </nav>
+            }
         </div>
 
-
+    </div>
+ </div>
         <script>
-               function showTransactionDetails(transactionId) {
-               
+            // Add click event to rows
+            document.querySelectorAll(".transaction-row").forEach((row) => {
+                row.addEventListener("click", function (event) {
+                    // Ignore clicks on checkboxes
+                    if (event.target.tagName.toLowerCase() === "input" && event.target.type === "checkbox") {
+                        return;
+                    }
+
+                    // Get the transaction ID from the data-id attribute
+                    const transactionId = this.getAttribute("data-id");
+
+                    // Fetch and show transaction details
+                    showTransactionDetails(transactionId);
+                });
+            });
+
+            // Function to fetch transaction details and display the modal
+            function showTransactionDetails(transactionId) {
                 $.ajax({
-                    url: `/Transaction/Details/${transactionId}`, 
-                    type: 'GET',
+                    url: `/Transaction/Details/${transactionId}`,
+                    type: "GET",
                     success: function (data) {
-                       
-                        $('#transactionDetails').html(data);
-                        
-                        $('#transactionModal').modal('show');
+                        // Populate modal with fetched details
+                        $("#transactionDetails").html(data);
+
+                        // Show the modal
+                        $("#transactionModal").modal("show");
                     },
                     error: function () {
-                        alert('Failed to load transaction details. Please try again.');
+                        alert("Failed to load transaction details. Please try again.");
                     }
                 });
             }
-
         </script>

@@ -40,7 +40,7 @@ namespace ExpenseTracker.Controllers
                                         .Select(u => u.UserId)
                                         .FirstOrDefaultAsync();
 
-            // If UserId is 0 (not found), handle the case or redirect to login
+         
             if (userId == 0)
             {
                 return RedirectToAction("Login", "Account");
@@ -88,7 +88,7 @@ namespace ExpenseTracker.Controllers
             return View(transactions);
         }
 
-        //Get Transaction Details with TransactionId
+        //Get Transactions with TransactionId
         public async Task<IActionResult> Details(int id)
         {
             var transaction = await _context.Transactions
@@ -98,6 +98,8 @@ namespace ExpenseTracker.Controllers
             {
                 return NotFound();
             }
+
+            // Return a partial view with transaction details
             return PartialView("_TransactionDetails", transaction);
         }
 
@@ -366,6 +368,30 @@ namespace ExpenseTracker.Controllers
 
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "TitleWithIcon", transaction.CategoryId);
             return View(transaction);
+        }
+
+        // Delete Transaction from checkbox
+        [HttpPost]
+        public async Task<IActionResult> DeleteSelected(List<int> selectedTransactions)
+        {
+            // Ensure that selectedTransactions is not null
+            if (selectedTransactions == null || selectedTransactions.Count == 0)
+            {
+                return RedirectToAction("Index");
+            }
+
+            // Fetch the transactions that are selected for deletion
+            var transactionsToDelete = await _context.Transactions
+                .Where(t => selectedTransactions.Contains(t.TransactionId))
+                .ToListAsync();
+
+            if (transactionsToDelete.Count > 0)
+            {
+                _context.Transactions.RemoveRange(transactionsToDelete);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction("Index");
         }
 
         // GET: Transaction/Delete/5

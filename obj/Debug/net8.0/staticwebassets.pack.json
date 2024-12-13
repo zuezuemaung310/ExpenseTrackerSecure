@@ -29,8 +29,16 @@
       "PackagePath": "staticwebassets\\images\\9e98736f-7112-4623-a07e-b30ad25a2d77_zue.jpg"
     },
     {
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\balance.png",
+      "PackagePath": "staticwebassets\\images\\balance.png"
+    },
+    {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\e901de51-ccd3-4ac7-a2ac-5e366cfd6dec_home.png",
       "PackagePath": "staticwebassets\\images\\e901de51-ccd3-4ac7-a2ac-5e366cfd6dec_home.png"
+    },
+    {
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\expense.png",
+      "PackagePath": "staticwebassets\\images\\expense.png"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\fcc8f6f9-20bd-4a5a-abaf-ca8bf6daf0cf_izumi.jpg",
@@ -41,12 +49,20 @@
       "PackagePath": "staticwebassets\\images\\file.png"
     },
     {
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\income.png",
+      "PackagePath": "staticwebassets\\images\\income.png"
+    },
+    {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\japanese.jpg",
       "PackagePath": "staticwebassets\\images\\japanese.jpg"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\restaurant.png",
       "PackagePath": "staticwebassets\\images\\restaurant.png"
+    },
+    {
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\wallpaper - Copy.jpg",
+      "PackagePath": "staticwebassets\\images\\wallpaper - Copy.jpg"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\js\\calendar.js",

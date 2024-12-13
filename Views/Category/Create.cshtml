@@ -4,11 +4,13 @@
     ViewData["Title"] = "Create Category";
 
 }
-
+@* card bg-light *@
 <div class="row">
-    <div class="col-md-6 col-lg-6 offset-lg-3 card p-5 mt-3 bg-light">
-        <h4 class="text-center text-dark py-2">Create Category</h4>
-      
+    <div class="col-md-6 col-lg-6 offset-lg-3  pb-5 px-5 ">
+        <a asp-action="Index" class="text-start text-black text-decoration-none"><i class="fa-solid fa-arrow-left fa-lg"></i></a>
+        <h2 class="text-center text-dark py-2">Create Category</h2>
+        <hr />
+
         <form asp-action="Create" class="text-start" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -52,10 +54,9 @@
                     }
                 </div>
                 <!-- Submit Button -->
-            <div class="form-group mb-3">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
-                </div>
+            <div class="form-group mb-3 d-flex justify-content-center">
+                <input type="submit" value="Create" class="btn btn-primary px-4 rounded" />
+            </div>
             </form>
     </div>
 </div>

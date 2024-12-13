@@ -7,46 +7,79 @@
 <div class="row">
     <div class="col-10 offset-1">
         <div class="row">
+            <div class="col-10">
+                <h2 class="text-center py-3">Summary Report Dashboard</h2>
+            </div>
+            <div class="col-2 py-3">
+                <div class="dropdown">
+                    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">
+                        View Reports
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Weekly Overview</a></li>
+                        <li><a class="dropdown-item" href="#">Monthly Overview</a></li>
+                        <li><a class="dropdown-item" href="#">Yearly Overview</a></li>
+                        <li><a class="dropdown-item" href="#">Complete Summary</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
             <!-- Total Income Card -->
             <div class="col-4">
-                <div class="card text-white bg-success mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Income</h5>
-                        <p class="card-text">@Model.TotalIncome 円</p>
+                <div class="card text-white  mb-3 rounded-5 shadow-sm p-3" style="background-color: #4BD68A;">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <div class="px-4 text-black">
+                            <h4 class="mb-1">@Model.TotalIncome 円</h4>
+                            <p class="mb-0">Total Income</p>
+                        </div>
+                        <img src="/images/income.png" alt="Income Icon" style="width: 50px; height: 50px;" />
                     </div>
                 </div>
             </div>
 
             <!-- Total Expense Card -->
             <div class="col-4">
-                <div class="card text-white bg-danger mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Expense</h5>
-                        <p class="card-text">@Model.TotalExpense 円</p>
+                <div class="card text-white mb-3 rounded-5 shadow-sm p-3" style="background-color: #FB8EBF;">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <div class="px-4 text-black">
+                            <h4 class="mb-1">@Model.TotalExpense 円</h4>
+                            <p class="mb-0">Total Expense</p>
+                        </div>
+                        <img src="/images/expense.png" alt="Expense Icon" style="width: 50px; height: 50px;" />
                     </div>
                 </div>
             </div>
 
             <!-- Total Balance Card -->
             <div class="col-4">
-                <div class="card text-white bg-primary mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Balance</h5>
-                        <p class="card-text">@Model.TotalBalance 円</p>
+                <div class="card text-white mb-3 rounded-5 shadow-sm p-3" style="background-color: #86B0F7;">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <div class="px-4 text-black">
+                            <h4 class="mb-1">@Model.TotalBalance 円</h4>
+                            <p class="mb-0">Balance</p>
+                        </div>
+                        <img src="/images/balance.png" alt="Balance Icon" style="width: 50px; height: 50px;" />
                     </div>
                 </div>
             </div>
-           
-        </div>
+        </div>   
 
-        <div class="row py-5">
+        <div class="row">
+            <div class="col-6 py-2 text-center">
+                <h5>Spending Analysis</h5>
+            </div>
+            <div class="col-6 py-2 text-center">
+                <h5>Income vs Expense</h5>
+            </div>
+        </div>
+        <div class="row">
             <!-- Pie Chart -->
             <div class="col-6">
                 <canvas id="expensePieChart"></canvas>
             </div>
-
             <!-- Spline Chart -->
-            <div class="col-6 chart-container pt-4">
+            <div class="col-6 chart-container pt-2">   
                 <canvas id="splineChart"></canvas>
             </div>
         </div>
@@ -72,14 +105,14 @@
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false, // Allows control over width and height
+                maintainAspectRatio: false,
                 plugins: {
                     legend: {
                         labels: {
-                            usePointStyle: true, // Makes legend markers circular
+                            usePointStyle: true,
                             pointStyle: 'circle',
                             font: {
-                                size: 12 // Smaller font size for the legend
+                                size: 12
                             }
                         }
                     }
@@ -146,7 +179,7 @@
                         callbacks: {
                             label: function(context) {
                                 let value = context.raw;
-                                return context.dataset.label + ': ' + value.toLocaleString(); // Add commas
+                                return context.dataset.label + ': ' + value.toLocaleString(); 
                             }
                         }
                     }

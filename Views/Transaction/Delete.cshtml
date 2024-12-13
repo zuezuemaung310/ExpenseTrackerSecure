@@ -5,9 +5,10 @@
 }
 
     <div class="row">
-        <div class="col-md-6 col-lg-6 offset-lg-3 card p-5 mt-3 bg-light">
-            <h4 class="text-center text-dark py-2">Delete Transaction</h4>
-            <hr />
+    <div class="col-md-6 col-lg-6 offset-lg-3 pb-5 px-5 ">
+        <a asp-action="Index" class="text-start text-black text-decoration-none"><i class="fa-solid fa-arrow-left fa-lg"></i></a>
+        <h2 class="text-center text-dark py-2">Delete Transaction</h2>
+        <hr />
 
         <dl class="row text-dark text-start">
             <dt class = "col-sm-4">
@@ -56,10 +57,10 @@
             </dd>
         </dl>
     
-        <form asp-action="Delete">
+        <form asp-action="Delete" class="d-flex justify-content-center">
             <input type="hidden" asp-for="TransactionId" />
-            <input type="submit" value="Delete" class="btn btn-danger" /> 
-            <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+            <input type="submit" value="Delete" class="btn btn-danger px-4 rounded" />
         </form>
+
     </div>
 </div>

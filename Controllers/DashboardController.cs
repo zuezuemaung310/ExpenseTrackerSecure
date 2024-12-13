@@ -87,26 +87,5 @@ namespace ExpenseTracker.Controllers
 
             return View(dashboardViewModel);
         }
-
-        [HttpGet]
-        public IActionResult Calendar()
-        {
-            if (HttpContext.Session.GetString("Username") == null)
-            {
-                return RedirectToAction("Login", "Account");
-            }
-            var username = HttpContext.Session.GetString("Username");
-
-            var user = _context.Users.FirstOrDefault(u => u.Username == username);
-            if (user != null)
-            {
-
-                ViewData["Username"] = user.Username;
-                ViewData["UserImagePath"] = user.ImagePath;
-            }
-
-
-            return View();
-        }
     }
 }
