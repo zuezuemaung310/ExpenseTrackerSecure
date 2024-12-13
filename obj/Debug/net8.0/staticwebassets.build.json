@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xChIXcSfS92Q2VQP69DHu3hjhH8n6LO3cz+uijtXTKc=",
+  "Hash": "gS5swUOmypuKToYfQaiZ03xE9DooMMmU/+tAnsNBUPo=",
   "Source": "ExpenseTracker",
   "BasePath": "_content/ExpenseTracker",
   "Mode": "Default",
@@ -2539,7 +2539,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 10 Dec 2024 08:42:47 GMT"
+          "Value": "Fri, 13 Dec 2024 07:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2576,7 +2576,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 10 Dec 2024 08:42:47 GMT"
+          "Value": "Fri, 13 Dec 2024 07:05:30 GMT"
         },
         {
           "Name": "Cache-Control",

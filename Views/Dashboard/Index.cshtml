@@ -1,33 +1,35 @@
 ﻿@model ExpenseTracker.Models.DashboardViewModel
 
 @{
-    ViewData["Title"] = "Dashboard";
+    ViewData["Title"] = ViewData["Title"] ?? "Weekly Report Dashboard";
 }
 
 <div class="row">
     <div class="col-10 offset-1">
         <div class="row">
             <div class="col-10">
-                <h2 class="text-center py-3">Summary Report Dashboard</h2>
+                <h2 class="text-center py-3">@ViewData["Title"]</h2>
             </div>
             <div class="col-2 py-3">
                 <div class="dropdown">
-                    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown">
                         View Reports
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Weekly Overview</a></li>
-                        <li><a class="dropdown-item" href="#">Monthly Overview</a></li>
-                        <li><a class="dropdown-item" href="#">Yearly Overview</a></li>
-                        <li><a class="dropdown-item" href="#">Complete Summary</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Index", "Dashboard", new { reportType = "Weekly" })">Weekly Overview</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Index", "Dashboard", new { reportType = "Monthly" })">Monthly Overview</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Index", "Dashboard", new { reportType = "Yearly" })">Yearly Overview</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Index", "Dashboard", new { reportType = "Summary" })">Summary Overview</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <!-- Report Content -->
         <div class="row text-center">
             <!-- Total Income Card -->
             <div class="col-4">
-                <div class="card text-white  mb-3 rounded-5 shadow-sm p-3" style="background-color: #4BD68A;">
+                <div class="card text-white mb-3 rounded-5 shadow-sm p-3" style="background-color: #86B0F7;">
                     <div class="card-body d-flex justify-content-center align-items-center">
                         <div class="px-4 text-black">
                             <h4 class="mb-1">@Model.TotalIncome 円</h4>
@@ -40,7 +42,7 @@
 
             <!-- Total Expense Card -->
             <div class="col-4">
-                <div class="card text-white mb-3 rounded-5 shadow-sm p-3" style="background-color: #FB8EBF;">
+                <div class="card text-white mb-3 rounded-5 shadow-sm p-3" style="background-color: #FFD6D6;">
                     <div class="card-body d-flex justify-content-center align-items-center">
                         <div class="px-4 text-black">
                             <h4 class="mb-1">@Model.TotalExpense 円</h4>
@@ -53,7 +55,7 @@
 
             <!-- Total Balance Card -->
             <div class="col-4">
-                <div class="card text-white mb-3 rounded-5 shadow-sm p-3" style="background-color: #86B0F7;">
+                <div class="card text-white mb-3 rounded-5 shadow-sm p-3" style="background-color: #D6F8D6;">
                     <div class="card-body d-flex justify-content-center align-items-center">
                         <div class="px-4 text-black">
                             <h4 class="mb-1">@Model.TotalBalance 円</h4>
@@ -63,7 +65,7 @@
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>
 
         <div class="row">
             <div class="col-6 py-2 text-center">
@@ -79,12 +81,11 @@
                 <canvas id="expensePieChart"></canvas>
             </div>
             <!-- Spline Chart -->
-            <div class="col-6 chart-container pt-2">   
+            <div class="col-6 chart-container pt-2">
                 <canvas id="splineChart"></canvas>
             </div>
         </div>
     </div>
-
 </div>
 
 @section Scripts {
@@ -117,7 +118,7 @@
                         }
                     }
                 },
-            layout: {
+                layout: {
                     padding: {
                         top: 10,
                         bottom: 10
@@ -136,20 +137,20 @@
                     {
                         label: 'Income',
                         data: @Html.Raw(Json.Serialize(Model.Transactions.Select(x => x.Income))),
-                        borderColor: '#3498DB', 
+                        borderColor: '#3498DB',
                         backgroundColor: '#3498DB',
                         pointStyle: 'circle',
-                        pointRadius: 5, 
+                        pointRadius: 5,
                         fill: false,
-                        tension: 0.4 
+                        tension: 0.4
                     },
                     {
                         label: 'Expense',
                         data: @Html.Raw(Json.Serialize(Model.Transactions.Select(x => x.Expense))),
-                        borderColor: '#FF5733', 
+                        borderColor: '#FF5733',
                         backgroundColor: '#FF5733',
                         pointStyle: 'circle',
-                        pointRadius: 5, 
+                        pointRadius: 5,
                         fill: false,
                         tension: 0.4
                     }
@@ -157,29 +158,29 @@
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false, 
+                maintainAspectRatio: false,
                 plugins: {
                     legend: {
                         display: true,
                         position: 'top',
                         labels: {
-                            usePointStyle: true, 
+                            usePointStyle: true,
                             font: {
                                 size: 14,
                                 weight: 'bold'
                             },
-                            color: '#000' 
+                            color: '#000'
                         }
                     },
                     tooltip: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.7)', 
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
                         titleFont: { size: 14, weight: 'bold' },
                         bodyFont: { size: 12 },
                         padding: 10,
                         callbacks: {
                             label: function(context) {
                                 let value = context.raw;
-                                return context.dataset.label + ': ' + value.toLocaleString(); 
+                                return context.dataset.label + ': ' + value.toLocaleString();
                             }
                         }
                     }
@@ -187,11 +188,11 @@
                 scales: {
                     x: {
                         ticks: {
-                            color: '#000', 
+                            color: '#000',
                             font: { size: 12 }
                         },
                         grid: {
-                            color: 'rgba(0, 0, 0, 0.1)' 
+                            color: 'rgba(0, 0, 0, 0.1)'
                         }
                     },
                     y: {
@@ -203,7 +204,7 @@
                             }
                         },
                         grid: {
-                            color: 'rgba(0, 0, 0, 0.1)' 
+                            color: 'rgba(0, 0, 0, 0.1)'
                         },
                         beginAtZero: true
                     }
@@ -218,6 +219,5 @@
                 }
             }
         });
-
     </script>
 }
