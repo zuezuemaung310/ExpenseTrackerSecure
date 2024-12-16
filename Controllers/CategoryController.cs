@@ -29,6 +29,7 @@ namespace ExpenseTracker.Controllers
             {
                 ViewData["Username"] = user.Username;
                 ViewData["UserImagePath"] = user.ImagePath;
+                ViewData["Role"] = user.Role;
             }
 
             var totalItems = await _context.Categories.CountAsync();

@@ -5,6 +5,7 @@
     int totalPages = ViewBag.TotalPages;
     int currentPage = ViewBag.CurrentPage;
     int totalItems = ViewBag.TotalItems;
+    string role = ViewBag.Role;
 }
 @if (TempData["Create"] != null)
 {
@@ -36,7 +37,10 @@ else if (TempData["Delete"] != null)
                 <h1 class="text-center py-2 text-dark">Categories</h1>
             </div>
             <div class=" col-6 d-flex justify-content-end pe-10 py-3">
-                <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> &nbsp; Category</a>
+                @if (role == "Admin") 
+                {
+                    <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> &nbsp; Category</a>
+                }
             </div>
        </div>
        
@@ -52,7 +56,10 @@ else if (TempData["Delete"] != null)
                     <th>
                         @Html.DisplayNameFor(model => model.Type)
                     </th>
-                    <th>Actions</th>
+                     @if (role == "Admin")  
+                    {
+                        <th>Actions</th>
+                    }
                 </tr>
             </thead>
             <tbody>
@@ -74,14 +81,15 @@ else if (TempData["Delete"] != null)
                                 <span class="badge bg-danger">@item.Type</span>
                               }
                      </td>
-   
-                    <td>
-                            <a asp-action="Edit" asp-route-id="@item.CategoryId" class="text-danger"><i class="fa-solid fa-pen-to-square"></i></a>
-                            <a asp-action="Delete" asp-route-id="@item.CategoryId"
-                               class="btn btn-sm text-decoration-none text-danger"> <i class="fa-solid fa-trash-can"></i>
-                            </a>
-                           
-                    </td>
+                   
+                        @if (role == "Admin")
+                        {
+                           <td>
+                                <a asp-action="Edit" asp-route-id="@item.CategoryId" class="text-danger"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a asp-action="Delete" asp-route-id="@item.CategoryId" class="btn btn-sm text-decoration-none text-danger"> <i class="fa-solid fa-trash-can"></i></a>
+                           </td>
+                        }
+                    
                 </tr>
                 }
              </tbody>

@@ -28,6 +28,8 @@ namespace ExpenseTracker.Models
         public string? ResetToken { get; set; }
 
         public bool RememberMe { get; set; }
+
+        public string Role { get; set; } = "User";
         public string? Phone { get; set; } 
 
         public string? Address { get; set; } 

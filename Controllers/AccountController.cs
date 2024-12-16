@@ -49,7 +49,8 @@ namespace ExpenseTracker.Controllers
                 {
                     Username = model.Username,
                     Email = model.Email,
-                    Password = hashedPassword
+                    Password = hashedPassword,
+                    Role = "User"
                 };
 
                 _context.Users.Add(user);
@@ -165,6 +166,7 @@ namespace ExpenseTracker.Controllers
             }
 
             HttpContext.Session.SetString("Username", username);
+            HttpContext.Session.SetString("Role", user.Role);
 
             user.RememberMe = rememberMe;
             _context.Update(user);
@@ -456,9 +458,9 @@ namespace ExpenseTracker.Controllers
         // Logout
         public async Task<IActionResult> Logout()
         {
-            // Log out the user by clearing their authentication cookie
             //await HttpContext.SignOutAsync();
             HttpContext.Session.Clear();
+            Response.Cookies.Delete("Username");
             return RedirectToAction("Login", "Account");
         }
     }

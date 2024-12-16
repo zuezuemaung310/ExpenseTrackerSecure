@@ -44,7 +44,7 @@
             <div class="form-group mb-3">
                 <label asp-for="Image" class="form-label ">Profile Image</label>
                 <div class="mb-3">
-                    <img src="@Url.Content(Model.ImagePath)" alt="Profile Image" class="img-thumbnail" width="100" height="100" />
+                    <img src="@Url.Content(Model.ImagePath)" alt="No Images Available" class="img-thumbnail" width="100" height="100" />
                 </div>
                 <input type="file" class="form-control form-control" asp-for="Image" />
                 <input type="hidden" name="ImagePath" value="@Model.ImagePath" />
