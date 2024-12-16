@@ -7,9 +7,14 @@
 @* card bg-light *@
 <div class="row">
     <div class="col-md-6 col-lg-6 offset-lg-3  pb-5 px-5 ">
-        <a asp-action="Index" class="text-start text-black text-decoration-none"><i class="fa-solid fa-arrow-left fa-lg"></i></a>
-        <h2 class="text-center text-dark py-2">Create Category</h2>
-        <hr />
+        <div class="row">
+            <div class="col-md-1 pt-4">
+                <a asp-action="Index" class="text-start text-black text-decoration-none"><i class="fa-solid fa-arrow-left fa-lg"></i></a>
+            </div>
+            <div class="col-md-11 py-2">
+                <h2 class="text-center text-dark py-2">Create Category</h2>
+            </div>
+        </div>
 
         <form asp-action="Create" class="text-start" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>

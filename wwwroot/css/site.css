@@ -1,7 +1,9 @@
 html {
-  font-size: 14px;
-  position:relative;
-  font-family : "Inter";
+    /*    font-size: 14px;*/
+    position: relative;
+    /*  font-family : "Inter";*/
+    font-family: "Poppins", serif;
+    font-weight: 200;
 }
 
 *:not(.fa-solid):not(.fa){

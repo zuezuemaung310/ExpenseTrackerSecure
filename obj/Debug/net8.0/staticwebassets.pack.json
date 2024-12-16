@@ -49,12 +49,28 @@
       "PackagePath": "staticwebassets\\images\\file.png"
     },
     {
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\forgot.gif",
+      "PackagePath": "staticwebassets\\images\\forgot.gif"
+    },
+    {
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\forgot.jpg",
+      "PackagePath": "staticwebassets\\images\\forgot.jpg"
+    },
+    {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\income.png",
       "PackagePath": "staticwebassets\\images\\income.png"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\japanese.jpg",
       "PackagePath": "staticwebassets\\images\\japanese.jpg"
+    },
+    {
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\login.jpg",
+      "PackagePath": "staticwebassets\\images\\login.jpg"
+    },
+    {
+      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\registration.gif",
+      "PackagePath": "staticwebassets\\images\\registration.gif"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\restaurant.png",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "L7sXs6nmMxNWERz+6k373Syud7zqoQVpOuACJcLT4nk=",
+  "Hash": "rmdfPX1APoRlP0gIsMdApO5t6yoT083wrbzXlcJMTxo=",
   "Source": "ExpenseTracker",
   "BasePath": "_content/ExpenseTracker",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "to5qrp8apa",
-      "Integrity": "s2H3af6K84vTH5r+O0fJUtA3OFhHZLVSTaUXsOpcXUI=",
+      "Fingerprint": "xvz6xy3blz",
+      "Integrity": "04uI38vl7OepLR9rzjpqPSWpIutxFoKym97OGTUeOvs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -290,6 +290,48 @@
       "OriginalItemSpec": "wwwroot\\images\\file.png"
     },
     {
+      "Identity": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\forgot.gif",
+      "SourceId": "ExpenseTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\",
+      "BasePath": "_content/ExpenseTracker",
+      "RelativePath": "images/forgot#[.{fingerprint}]?.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4gcju61vhv",
+      "Integrity": "PLRLc4F5XEaL5QfTXnxadSQWAuR+ArrCiRB9oAqZ4aE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\forgot.gif"
+    },
+    {
+      "Identity": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\forgot.jpg",
+      "SourceId": "ExpenseTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\",
+      "BasePath": "_content/ExpenseTracker",
+      "RelativePath": "images/forgot#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xb246a0n11",
+      "Integrity": "My2cgRZMsPKmqydVEs1JjwTd1pewt97C/PLEfj7k2OE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\forgot.jpg"
+    },
+    {
       "Identity": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\income.png",
       "SourceId": "ExpenseTracker",
       "SourceType": "Discovered",
@@ -330,6 +372,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\japanese.jpg"
+    },
+    {
+      "Identity": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\login.jpg",
+      "SourceId": "ExpenseTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\",
+      "BasePath": "_content/ExpenseTracker",
+      "RelativePath": "images/login#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8tay3rec1o",
+      "Integrity": "xIVcb8Sv+0+hOYo+PB72Ho2XlenLiHjYsICzH1hXpMI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\login.jpg"
+    },
+    {
+      "Identity": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\registration.gif",
+      "SourceId": "ExpenseTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\",
+      "BasePath": "_content/ExpenseTracker",
+      "RelativePath": "images/registration#[.{fingerprint}]?.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "seprpvhylw",
+      "Integrity": "ZN7na/AEtLQJZb2zsj4fDWg8LglfX56eTcoy9IlR2a0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\registration.gif"
     },
     {
       "Identity": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\restaurant.png",
@@ -1625,7 +1709,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1275"
+          "Value": "1355"
         },
         {
           "Name": "Content-Type",
@@ -1633,11 +1717,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"s2H3af6K84vTH5r+O0fJUtA3OFhHZLVSTaUXsOpcXUI=\""
+          "Value": "\"04uI38vl7OepLR9rzjpqPSWpIutxFoKym97OGTUeOvs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 03:11:48 GMT"
+          "Value": "Mon, 16 Dec 2024 03:52:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1647,12 +1731,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-s2H3af6K84vTH5r+O0fJUtA3OFhHZLVSTaUXsOpcXUI="
+          "Value": "sha256-04uI38vl7OepLR9rzjpqPSWpIutxFoKym97OGTUeOvs="
         }
       ]
     },
     {
-      "Route": "css/site.to5qrp8apa.css",
+      "Route": "css/site.xvz6xy3blz.css",
       "AssetFile": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1662,7 +1746,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1275"
+          "Value": "1355"
         },
         {
           "Name": "Content-Type",
@@ -1670,11 +1754,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"s2H3af6K84vTH5r+O0fJUtA3OFhHZLVSTaUXsOpcXUI=\""
+          "Value": "\"04uI38vl7OepLR9rzjpqPSWpIutxFoKym97OGTUeOvs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 03:11:48 GMT"
+          "Value": "Mon, 16 Dec 2024 03:52:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1684,7 +1768,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "to5qrp8apa"
+          "Value": "xvz6xy3blz"
         },
         {
           "Name": "label",
@@ -1692,7 +1776,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-s2H3af6K84vTH5r+O0fJUtA3OFhHZLVSTaUXsOpcXUI="
+          "Value": "sha256-04uI38vl7OepLR9rzjpqPSWpIutxFoKym97OGTUeOvs="
         }
       ]
     },
@@ -2681,6 +2765,170 @@
       ]
     },
     {
+      "Route": "images/forgot.4gcju61vhv.gif",
+      "AssetFile": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\forgot.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "984394"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PLRLc4F5XEaL5QfTXnxadSQWAuR+ArrCiRB9oAqZ4aE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 04:30:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4gcju61vhv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/forgot.gif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PLRLc4F5XEaL5QfTXnxadSQWAuR+ArrCiRB9oAqZ4aE="
+        }
+      ]
+    },
+    {
+      "Route": "images/forgot.gif",
+      "AssetFile": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\forgot.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "984394"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PLRLc4F5XEaL5QfTXnxadSQWAuR+ArrCiRB9oAqZ4aE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 04:30:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PLRLc4F5XEaL5QfTXnxadSQWAuR+ArrCiRB9oAqZ4aE="
+        }
+      ]
+    },
+    {
+      "Route": "images/forgot.jpg",
+      "AssetFile": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\forgot.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "45052"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"My2cgRZMsPKmqydVEs1JjwTd1pewt97C/PLEfj7k2OE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 04:35:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-My2cgRZMsPKmqydVEs1JjwTd1pewt97C/PLEfj7k2OE="
+        }
+      ]
+    },
+    {
+      "Route": "images/forgot.xb246a0n11.jpg",
+      "AssetFile": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\forgot.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "45052"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"My2cgRZMsPKmqydVEs1JjwTd1pewt97C/PLEfj7k2OE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 04:35:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xb246a0n11"
+        },
+        {
+          "Name": "label",
+          "Value": "images/forgot.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-My2cgRZMsPKmqydVEs1JjwTd1pewt97C/PLEfj7k2OE="
+        }
+      ]
+    },
+    {
       "Route": "images/income.4dy0flb8xf.png",
       "AssetFile": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\income.png",
       "Selectors": [],
@@ -2841,6 +3089,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-IJ1WS1DZSP/WVUUp1WORm5BAmpMO3lC+d9IYXqLVduQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/login.8tay3rec1o.jpg",
+      "AssetFile": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\login.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53269"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xIVcb8Sv+0+hOYo+PB72Ho2XlenLiHjYsICzH1hXpMI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 04:00:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8tay3rec1o"
+        },
+        {
+          "Name": "label",
+          "Value": "images/login.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xIVcb8Sv+0+hOYo+PB72Ho2XlenLiHjYsICzH1hXpMI="
+        }
+      ]
+    },
+    {
+      "Route": "images/login.jpg",
+      "AssetFile": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\login.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53269"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xIVcb8Sv+0+hOYo+PB72Ho2XlenLiHjYsICzH1hXpMI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 04:00:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xIVcb8Sv+0+hOYo+PB72Ho2XlenLiHjYsICzH1hXpMI="
+        }
+      ]
+    },
+    {
+      "Route": "images/registration.gif",
+      "AssetFile": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\registration.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1888038"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZN7na/AEtLQJZb2zsj4fDWg8LglfX56eTcoy9IlR2a0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 11:16:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZN7na/AEtLQJZb2zsj4fDWg8LglfX56eTcoy9IlR2a0="
+        }
+      ]
+    },
+    {
+      "Route": "images/registration.seprpvhylw.gif",
+      "AssetFile": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\registration.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1888038"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZN7na/AEtLQJZb2zsj4fDWg8LglfX56eTcoy9IlR2a0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 11:16:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "seprpvhylw"
+        },
+        {
+          "Name": "label",
+          "Value": "images/registration.gif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZN7na/AEtLQJZb2zsj4fDWg8LglfX56eTcoy9IlR2a0="
         }
       ]
     },

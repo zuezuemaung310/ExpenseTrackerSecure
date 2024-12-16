@@ -19,33 +19,33 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 }
-<div class="col-4 offset-4">
-    <h4 class="text-center text-dark py-2">Login</h4>
-    <hr />
-    <form asp-action="Login" method="post" class="container mt-4 p-4 border rounded bg-light">
-        <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" name="username" id="username" class="form-control"  />
-        </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" name="password" id="password" class="form-control"  />
-        </div>
-        <div class="form-check">
-            <input type="checkbox" name="rememberMe" class="form-check-input" id="rememberMe" />
-            <label class="form-check-label" for="rememberMe">Remember Me</label>
-        </div>
-        <div class="text-center float-end">
-            <a asp-action="ForgotPassword" asp-controller="Account" class="btn btn-link">Forgot Password?</a>
-        </div>
-        @* @if (!string.IsNullOrEmpty(ViewData["LoginError"]?.ToString())) *@
-        @* { *@
-        @*     <div class="alert alert-danger"> *@
-        @*         @ViewData["LoginError"] *@
-        @*     </div> *@
-        @* } *@
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary w-100">Login</button>
-        </div>
-    </form>
+
+<div class="row">
+    <h2 class="text-dark text-center fw-bold pt-5">Expense Tracker</h2>
+    <div class="col-4 offset-1 d-flex justify-content-center align-items-center ">
+            <img src="/images/login.jpg" alt="Login Page" width="500" height="400" />
+    </div>
+    <div class="col-4 offset-1 d-flex justify-content-center align-items-center vh-400 p-2">
+        <form asp-action="Login" method="post" class="container">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="Username" />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="*******" />
+            </div>
+            @* <div class="form-check"> *@
+            @*     <input type="checkbox" name="rememberMe" class="form-check-input" id="rememberMe" /> *@
+            @*     <label class="form-check-label" for="rememberMe">Remember Me</label> *@
+            @* </div> *@
+            <div class="text-center float-end">
+                <a asp-action="ForgotPassword" asp-controller="Account" class="btn btn-link">Forgot Password?</a>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </div>
+        </form>
+    </div>
+
 </div>
