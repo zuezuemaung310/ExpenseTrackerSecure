@@ -2,42 +2,67 @@
 An Expense Tracker application built with ASP.NET Core 8 and SQL Server, providing user and admin roles for managing transactions, categories, and insightful financial reports. The application includes features like email verification, password recovery, and Excel export functionality.
 
 Features
+
 ## Authentication & Authorization
+
 	User Registration with Email Verification
+
 	Forgot Password / Reset Password functionality
+
 	Role-based Authorization:
+
 •	Admin: Full access to categories and transactions
+
 •	User: Can view categories and manage transactions
 
 ## Category Management
-	Only Admins can Create, Read, Update, and Delete (CRUD) categories.
-	Users can view categories but cannot modify them.
+
+	Only Admins can Create, Read, Update, and Delete (CRUD) categories
+
+	Users can view categories but cannot modify them
 
 ## Transaction Management
+
 	Both Admin and User can perform CRUD operations on transactions.
-	Search transactions using date range (start date and end date).
+
+	Search transactions using date range (start date and end date)
+
 	Export transactions as an Excel file:
+
 •	Download all transactions.
+
 •	Download transactions filtered by a date range.
 
 ## Dashboard
+
 	View comprehensive financial reports:
+
 •	Weekly, Monthly, and Yearly Reports
+
 •	Summary Report of expenses
+
 o	Pie Chart: Visualize expenses by category.
+
 o	Spline Chart: Compare income vs expenses.
 
 ## User Profile Management
-	Update Profile Details (name, email, phone, etc.).
+
+	Update Profile Details (name, email, phone, etc.)
+
 	Change Password.
 
 # Technologies Used
 
 	Backend: ASP.NET Core 8
+
 	Database: SQL Server
+
 	Frontend: Razor Pages, Bootstrap 5
+
 	Charts: Chart.js (for Pie and Spline charts)
+
 	Excel Export: EPPlus and XML (for generating Excel files)
+
 	Email Services: SMTP (for email verification and reset password)
 
 # Installation & Setup
