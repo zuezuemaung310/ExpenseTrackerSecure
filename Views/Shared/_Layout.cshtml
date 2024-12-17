@@ -31,14 +31,14 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="Index"> <i class="fa-solid fa-chart-line"></i>&nbsp;Dashboard</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="Index"> <i class="fa-solid fa-chart-line text-primary"></i>&nbsp;Dashboard</a>
                         </li>
                         <li class="nav-item">
 
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index"><i class="fa-solid fa-folder-closed"></i> &nbsp;Category</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index"><i class="fa-solid fa-folder-closed text-danger"></i> &nbsp;Category</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Transaction" asp-action="Index"><i class="fa-solid fa-arrow-right-arrow-left"></i>&nbsp;Transaction</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Transaction" asp-action="Index"><i class="fa-solid fa-arrow-right-arrow-left text-success"></i>&nbsp;Transaction</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -54,32 +54,48 @@
                         else
                         {
                             <li class="nav-item">
-                                <div class="dropdown">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown">
-                                          @if (!string.IsNullOrEmpty(ViewData["UserImagePath"]?.ToString()))
-                                            {
-                                                <img src="@Url.Content(ViewData["UserImagePath"].ToString())" alt="Profile Image" width="30" height="30" class="rounded-circle" />
-                                            }
-                                            @ViewData["Username"]
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            &nbsp;&nbsp;<a asp-action="Profile" asp-controller="Account" class="text-black text-decoration-none"><i class="fa-solid fa-eye"></i> &nbsp;&nbsp;Profile</a>
-                                        </li>
-                                        <li>
-                                            &nbsp;&nbsp;<a asp-action="EditProfile" asp-controller="Account" class="text-black text-decoration-none"><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp; Profile</a>
-                                        </li>
-                                        <li>
-                                            &nbsp;&nbsp;<a asp-action="ChangePassword" asp-controller="Account" class="text-black text-decoration-none"> <i class="fa-solid fa-key "></i>&nbsp;&nbsp;Password</a>
-                                        </li>
-                                     </ul>
-                                </div>
+                                @if (!string.IsNullOrEmpty(ViewData["UserImagePath"]?.ToString()))
+                                {
+                                    <img src="@Url.Content(ViewData["UserImagePath"].ToString())" alt="Profile Image" width="30" height="30" class="rounded-circle" />
+                                }
+                                @ViewData["Username"]
                             </li>
                             <li class="nav-item">
-                                <form asp-controller="Account" asp-action="Logout" method="post">
-                                    <button type="submit" class="btn btn-danger">Logout</button>
-                                </form>
-                            </li>
+                                <div class="dropdown dropstart">
+                                    <button type="button" class="btn btn-default" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-gear fa-lg text-secondary"></i>
+                                    </button>
+                                <!-- Dropdown Menu -->
+                                <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded">
+                                    <!-- Profile View -->
+                                    <li>
+                                        <a asp-action="Profile" asp-controller="Account" class="dropdown-item d-flex align-items-center">
+                                            <i class="fa-solid fa-eye me-2 text-primary"></i> View Profile
+                                        </a>
+                                    </li>
+                                    <!-- Edit Profile -->
+                                    <li>
+                                        <a asp-action="EditProfile" asp-controller="Account" class="dropdown-item d-flex align-items-center">
+                                            <i class="fa-solid fa-pen-to-square me-2 text-warning"></i> Edit Profile
+                                        </a>
+                                    </li>
+                                    <!-- Change Password -->
+                                    <li>
+                                        <a asp-action="ChangePassword" asp-controller="Account" class="dropdown-item d-flex align-items-center">
+                                            <i class="fa-solid fa-key me-2 text-success"></i> Change Password
+                                        </a>
+                                    </li>
+                                    <!-- Logout -->
+                                    <li>
+                                        <form asp-controller="Account" asp-action="Logout" method="post" class="d-flex justify-content-center mt-2">
+                                            <button type="submit" class="btn btn-danger w-100">
+                                                <i class="fa-solid fa-arrow-right-from-bracket me-1"></i> Logout
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>  
                         }
                     </ul>
                 </div>
