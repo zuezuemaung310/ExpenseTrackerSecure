@@ -30,6 +30,7 @@ o	Spline Chart: Compare income vs expenses.
 ## User Profile Management
 	Update Profile Details (name, email, phone, etc.).
 	Change Password.
+
 # Technologies Used
 
 	Backend: ASP.NET Core 8
@@ -43,12 +44,14 @@ o	Spline Chart: Compare income vs expenses.
 
 Step 1 # Installation
 
-	[Visual Studio 2022+](https://visualstudio.microsoft.com/)
-	[SQL Server](https://www.microsoft.com/en-us/sql-server/)
+[Visual Studio 2022+](https://visualstudio.microsoft.com/)
+
+[SQL Server](https://www.microsoft.com/en-us/sql-server/)
 
 Step 2 # Clone the Repository
 
 git clone https://github.com/zuezuemaung310/ExpenseTrackerSecure.git
+
 cd ExpenseTracker
 
 Step 3 # Create and Configure the Database in SQL Server
@@ -68,6 +71,7 @@ Step 6 # Tools from Node Package Manager and Package Manager Console
 Step 7# Apply Database Migrations on Package Manager Console
 
 Add-Migration Initial
+
 Update-Database
 
 
