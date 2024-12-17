@@ -42,9 +42,8 @@ o	Spline Chart: Compare income vs expenses.
 # Installation & Setup
 
 Step 1 # Installation
-	[.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-	[SQL Server](https://www.microsoft.com/en-us/sql-server/)
 	[Visual Studio 2022+](https://visualstudio.microsoft.com/)
+	[SQL Server](https://www.microsoft.com/en-us/sql-server/)
 
 Step 2 # Clone the Repository
 	git clone https://github.com/zuezuemaung310/ExpenseTrackerSecure.git
