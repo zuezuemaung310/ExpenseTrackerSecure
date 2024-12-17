@@ -1,6 +1,7 @@
 ﻿using ExpenseTracker.Data;
 using ExpenseTracker.Dto;
 using ExpenseTracker.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -47,10 +48,18 @@ namespace ExpenseTracker.Controllers
             switch (reportType)
             {
                 case "Weekly":
-                    startDate = DateOnly.FromDateTime(DateTime.Now.AddDays(-7));
-                    endDate = DateOnly.FromDateTime(DateTime.Now);
-                    xAxisLabels = new List<string> { "Week 1", "Week 2", "Week 3", "Week 4" };
+                    var today = DateTime.Now;
+                    // Get the Sunday of the current week
+                    var sunday = today.AddDays(-(int)today.DayOfWeek);
+                    // Get the Saturday of the current week
+                    var saturday = sunday.AddDays(6);
+
+                    startDate = DateOnly.FromDateTime(sunday);
+                    endDate = DateOnly.FromDateTime(saturday);
+
+                    xAxisLabels = new List<string> { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
                     break;
+
 
                 case "Monthly":
                     startDate = new DateOnly(DateTime.Now.Year, DateTime.Now.Month, 1);
@@ -119,5 +128,8 @@ namespace ExpenseTracker.Controllers
 
             return View(dashboardViewModel);
         }
+
+
+
     }
 }

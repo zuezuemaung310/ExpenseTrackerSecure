@@ -1,319 +1,315 @@
 {
   "Files": [
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ExpenseTracker.bundle.scp.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ExpenseTracker.bundle.scp.css",
       "PackagePath": "staticwebassets\\ExpenseTracker.zn4f1t0fc5.bundle.scp.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\css\\site.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\css\\style.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\favicon.ico",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\466dd130-927e-41c1-863f-360a99ed3f63_wallpaper - Copy.jpg",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\466dd130-927e-41c1-863f-360a99ed3f63_wallpaper - Copy.jpg",
       "PackagePath": "staticwebassets\\images\\466dd130-927e-41c1-863f-360a99ed3f63_wallpaper - Copy.jpg"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\63667fe1-b271-4514-9619-2e9e08371588_zue.jpg",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\63667fe1-b271-4514-9619-2e9e08371588_zue.jpg",
       "PackagePath": "staticwebassets\\images\\63667fe1-b271-4514-9619-2e9e08371588_zue.jpg"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\9e98736f-7112-4623-a07e-b30ad25a2d77_zue.jpg",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\9e98736f-7112-4623-a07e-b30ad25a2d77_zue.jpg",
       "PackagePath": "staticwebassets\\images\\9e98736f-7112-4623-a07e-b30ad25a2d77_zue.jpg"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\balance.png",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\balance.png",
       "PackagePath": "staticwebassets\\images\\balance.png"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\e901de51-ccd3-4ac7-a2ac-5e366cfd6dec_home.png",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\e901de51-ccd3-4ac7-a2ac-5e366cfd6dec_home.png",
       "PackagePath": "staticwebassets\\images\\e901de51-ccd3-4ac7-a2ac-5e366cfd6dec_home.png"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\expense.png",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\expense.png",
       "PackagePath": "staticwebassets\\images\\expense.png"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\fcc8f6f9-20bd-4a5a-abaf-ca8bf6daf0cf_izumi.jpg",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\fcc8f6f9-20bd-4a5a-abaf-ca8bf6daf0cf_izumi.jpg",
       "PackagePath": "staticwebassets\\images\\fcc8f6f9-20bd-4a5a-abaf-ca8bf6daf0cf_izumi.jpg"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\file.png",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\file.png",
       "PackagePath": "staticwebassets\\images\\file.png"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\forgot.gif",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\forgot.gif",
       "PackagePath": "staticwebassets\\images\\forgot.gif"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\forgot.jpg",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\forgot.jpg",
       "PackagePath": "staticwebassets\\images\\forgot.jpg"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\income.png",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\income.png",
       "PackagePath": "staticwebassets\\images\\income.png"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\japanese.jpg",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\japanese.jpg",
       "PackagePath": "staticwebassets\\images\\japanese.jpg"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\login.jpg",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\login.jpg",
       "PackagePath": "staticwebassets\\images\\login.jpg"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\registration.gif",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\registration.gif",
       "PackagePath": "staticwebassets\\images\\registration.gif"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\restaurant.png",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\restaurant.png",
       "PackagePath": "staticwebassets\\images\\restaurant.png"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\images\\wallpaper - Copy.jpg",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\wallpaper - Copy.jpg",
       "PackagePath": "staticwebassets\\images\\wallpaper - Copy.jpg"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\js\\calendar.js",
-      "PackagePath": "staticwebassets\\js\\calendar.js"
-    },
-    {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\js\\site.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\money tracker\\ExpenseTracker\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

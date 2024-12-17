@@ -17,7 +17,6 @@ wwwroot\images\login.jpg
 wwwroot\images\registration.gif
 wwwroot\images\restaurant.png
 wwwroot\images\wallpaper - Copy.jpg
-wwwroot\js\calendar.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
