@@ -140,7 +140,7 @@ Step 3# Update Connection String in appsettings.json
 ![login](https://github.com/user-attachments/assets/8120c6c8-b1d2-4df5-8925-7ab205e56802)
 
 #Profile Page
-![login](https://github.com/user-attachments/assets/8120c6c8-b1d2-4df5-8925-7ab205e56802)
+![profile](https://github.com/user-attachments/assets/5c2e77ee-d930-4183-9dc6-d4bca2ddacb1)
 
 #Dashboard Page
 ![dashboard](https://github.com/user-attachments/assets/a51d3d90-bf2b-4c00-81af-4a87a33c6aba)
