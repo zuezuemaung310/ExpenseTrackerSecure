@@ -104,6 +104,27 @@ Update-Database
 ![Flow Chart](https://github.com/user-attachments/assets/f07afb12-c3b9-4986-993e-b9857321aca3)
 
 
+##Website Design
+
+#Register Page
+![register](https://github.com/user-attachments/assets/5de41e12-52bc-433b-be29-d823a47f2ef8)
+
+#Login Page
+![login](https://github.com/user-attachments/assets/8120c6c8-b1d2-4df5-8925-7ab205e56802)
+
+#Profile Page
+![login](https://github.com/user-attachments/assets/8120c6c8-b1d2-4df5-8925-7ab205e56802)
+
+#Dashboard Page
+![dashboard](https://github.com/user-attachments/assets/a51d3d90-bf2b-4c00-81af-4a87a33c6aba)
+
+#Category Page
+![category](https://github.com/user-attachments/assets/0bb277c2-5e02-4cfd-97de-e6e586178e72)
+
+#Transaction Page
+![transaction](https://github.com/user-attachments/assets/16a0894c-328e-47a1-af51-37bb2a1621bd)
+
+
 
 
 
