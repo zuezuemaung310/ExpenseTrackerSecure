@@ -109,8 +109,7 @@ Add-Migration Initial
 ```bash
 Update-Database
 ```
-
-If you wanna use MySQL instead of SQL Server 
+# If you wanna use MySQL instead of SQL Server
 
 Step 1# Tools from NuGet Package Manager and Manage NuGet Packages for Solution
 
