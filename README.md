@@ -100,6 +100,11 @@ Add-Migration Initial
 Update-Database
 
 
+## System Flow Chart
+![Flow Chart](https://github.com/user-attachments/assets/f07afb12-c3b9-4986-993e-b9857321aca3)
+
+
+
 
 
 
