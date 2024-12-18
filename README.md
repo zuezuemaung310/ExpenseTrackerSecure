@@ -75,9 +75,9 @@ Step 1 # Installation
 
 Step 2 # Clone the Repository
 
-bash'''
-git clone https://github.com/zuezuemaung310/ExpenseTrackerSecure.git
-'''
+```bash
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
 
 cd ExpenseTracker
 
