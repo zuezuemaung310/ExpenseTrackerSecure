@@ -7,7 +7,7 @@ namespace ExpenseTracker.Controllers
         [Route("Error/NotFound")]
         public IActionResult NotFound()
         {
-            return View(); // This will return the 404.cshtml view
+            return View(); 
         }
     }
 }

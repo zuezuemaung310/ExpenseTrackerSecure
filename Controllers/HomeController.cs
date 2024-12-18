@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ExpenseTracker.Controllers
 {
-    //[Authorize]
     public class HomeController : Controller
     {
        

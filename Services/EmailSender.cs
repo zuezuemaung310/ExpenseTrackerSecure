@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 public class EmailSender
 {
     private readonly IConfiguration _configuration;
-
     public EmailSender(IConfiguration configuration)
     {
         _configuration = configuration;
@@ -34,12 +33,3 @@ public class EmailSender
         }
     }
 }
-
-
-//namespace ExpenseTracker.Service
-//{
-//    public class EmailSender : IEmailSender
-//    {
-
-//    }
-//}

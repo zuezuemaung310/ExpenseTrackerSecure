@@ -17,24 +17,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\466dd130-927e-41c1-863f-360a99ed3f63_wallpaper - Copy.jpg",
-      "PackagePath": "staticwebassets\\images\\466dd130-927e-41c1-863f-360a99ed3f63_wallpaper - Copy.jpg"
-    },
-    {
-      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\63667fe1-b271-4514-9619-2e9e08371588_zue.jpg",
-      "PackagePath": "staticwebassets\\images\\63667fe1-b271-4514-9619-2e9e08371588_zue.jpg"
-    },
-    {
       "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\9e98736f-7112-4623-a07e-b30ad25a2d77_zue.jpg",
       "PackagePath": "staticwebassets\\images\\9e98736f-7112-4623-a07e-b30ad25a2d77_zue.jpg"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\balance.png",
       "PackagePath": "staticwebassets\\images\\balance.png"
-    },
-    {
-      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\e901de51-ccd3-4ac7-a2ac-5e366cfd6dec_home.png",
-      "PackagePath": "staticwebassets\\images\\e901de51-ccd3-4ac7-a2ac-5e366cfd6dec_home.png"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\expense.png",
@@ -45,14 +33,6 @@
       "PackagePath": "staticwebassets\\images\\fcc8f6f9-20bd-4a5a-abaf-ca8bf6daf0cf_izumi.jpg"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\file.png",
-      "PackagePath": "staticwebassets\\images\\file.png"
-    },
-    {
-      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\forgot.gif",
-      "PackagePath": "staticwebassets\\images\\forgot.gif"
-    },
-    {
       "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\forgot.jpg",
       "PackagePath": "staticwebassets\\images\\forgot.jpg"
     },
@@ -61,20 +41,12 @@
       "PackagePath": "staticwebassets\\images\\income.png"
     },
     {
-      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\japanese.jpg",
-      "PackagePath": "staticwebassets\\images\\japanese.jpg"
-    },
-    {
       "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\login.jpg",
       "PackagePath": "staticwebassets\\images\\login.jpg"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\registration.gif",
       "PackagePath": "staticwebassets\\images\\registration.gif"
-    },
-    {
-      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\restaurant.png",
-      "PackagePath": "staticwebassets\\images\\restaurant.png"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\wallpaper - Copy.jpg",
