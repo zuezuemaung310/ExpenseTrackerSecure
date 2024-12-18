@@ -76,10 +76,12 @@ Step 1 # Installation
 Step 2 # Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+https://github.com/zuezuemaung310/ExpenseTrackerSecure.git
+```
 
+```bash
 cd ExpenseTracker
+```
 
 Step 3 # Create and Configure the Database in SQL Server
 
