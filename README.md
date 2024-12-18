@@ -47,7 +47,7 @@ o	Spline Chart: Compare income vs expenses.
 
 ## User Profile Management
 
-	Update Profile Details (name, email, phone, etc.)
+	Update Profile Details (name, email, phone, address, etc.)
 
 	Change Password.
 
@@ -75,7 +75,9 @@ Step 1 # Installation
 
 Step 2 # Clone the Repository
 
+'''bash
 git clone https://github.com/zuezuemaung310/ExpenseTrackerSecure.git
+'''
 
 cd ExpenseTracker
 
