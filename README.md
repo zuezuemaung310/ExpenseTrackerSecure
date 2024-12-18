@@ -85,23 +85,30 @@ cd ExpenseTracker
 
 Step 3 # Create and Configure the Database in SQL Server
 
+```bash
 CREATE DATABASE Your_Database;
+```
 
 Step 4 # Open Visual Studio 2022, navigate to your project folder, and select the ExpenseTracker.sln solution file to open the project.
 
 Step 5 # Update Connection String in appsettings.json
 
+```bash
 "ConnectionStrings": {
     "DefaultConnection": "Server=Your_Server;Database=Your_Database;Trusted_Connection=True;TrustServerCertificate=True;"
 }
+```
 
 Step 6 # Tools from Node Package Manager and Package Manager Console
 
 Step 7# Apply Database Migrations on Package Manager Console
-
+```bash
 Add-Migration Initial
+```
 
+```bash
 Update-Database
+```
 
 
 ## System Flow Chart
