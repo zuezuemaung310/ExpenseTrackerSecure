@@ -75,7 +75,7 @@ Step 1 # Installation
 
 Step 2 # Clone the Repository
 
-'''bash
+bash'''
 git clone https://github.com/zuezuemaung310/ExpenseTrackerSecure.git
 '''
 
