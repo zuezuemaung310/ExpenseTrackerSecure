@@ -99,7 +99,7 @@ Step 5 # Update Connection String in appsettings.json
 }
 ```
 
-Step 6 # Tools from Node Package Manager and Package Manager Console
+Step 6 # Tools from NuGet Package Manager and Package Manager Console
 
 Step 7# Apply Database Migrations on Package Manager Console
 ```bash
@@ -109,6 +109,23 @@ Add-Migration Initial
 ```bash
 Update-Database
 ```
+
+If you wanna use MySQL instead of SQL Server 
+
+Step 1# Tools from NuGet Package Manager and Manage NuGet Packages for Solution
+
+Step 2 # Install MySQL in NuGet Package Manager
+```bash
+MySql.EntityFrameworkCore
+```
+
+Step 3# Update Connection String in appsettings.json
+```bash
+"ConnectionStrings": {
+  "DefaultConnection": "Server=localhost;Database=your-database-name;User=root;Password=your-password;"
+}
+```
+
 
 
 ## System Flow Chart
