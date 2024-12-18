@@ -56,7 +56,7 @@
                             <li class="nav-item">
                                 @if (!string.IsNullOrEmpty(ViewData["UserImagePath"]?.ToString()))
                                 {
-                                    <img src="@Url.Content(ViewData["UserImagePath"].ToString())" alt="Profile Image" width="30" height="30" class="rounded-circle" />
+                                    <img src="@Url.Content(ViewData["UserImagePath"].ToString())" width="30" height="30" class="rounded-circle" />
                                 }
                                 @ViewData["Username"]
                             </li>
