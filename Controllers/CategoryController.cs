@@ -143,7 +143,7 @@ namespace ExpenseTracker.Controllers
             return View(category);
         }
 
-        // GET: Category/Delete/5
+        //GET: Category/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             var username = HttpContext.Session.GetString("Username");
@@ -173,7 +173,7 @@ namespace ExpenseTracker.Controllers
             return View(category);
         }
 
-        // POST: Category/Delete/5
+        //POST: Category/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

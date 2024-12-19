@@ -91,7 +91,7 @@ else if (TempData["DeleteTransaction"] != null)
                             <th>@Html.DisplayNameFor(model => model.PaymentMethod)</th>
                             <th>@Html.DisplayNameFor(model => model.Note)</th>
                             <th>
-                                <button type="submit" class="btn btn-danger text-white" id="deleteSelectedBtn">
+                                <button type="submit" class="btn btn-danger text-white" id="deleteSelectedBtn" onclick="return confirmDelete();">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
                             </th>
@@ -154,7 +154,7 @@ else if (TempData["DeleteTransaction"] != null)
 
 
             <!-- Pagination -->
-            @if (ViewBag.TotalItems > 8) 
+            @if (ViewBag.TotalItems > 10) 
             {
                 <nav class="pt-3">
                     <ul class="pagination justify-content-end">

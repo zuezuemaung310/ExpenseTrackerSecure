@@ -48,7 +48,6 @@ namespace ExpenseTracker.Controllers
 
             var query = _context.Transactions.AsQueryable();
 
-            // Filter by date range if provided
             if (startDate.HasValue && endDate.HasValue)
             {
                 query = query.Where(t => t.Date >= startDate.Value && t.Date <= endDate.Value);
@@ -66,21 +65,21 @@ namespace ExpenseTracker.Controllers
                 ViewBag.StartDate = startDate?.ToString("yyyy-MM-dd");
                 ViewBag.EndDate = endDate?.ToString("yyyy-MM-dd");
 
-                // Apply pagination
                 query = query.OrderBy(t => t.TransactionId)
                              .Skip((pageNumber - 1) * pageSize)
+                             .OrderByDescending(t => t.TransactionId)
                              .Take(pageSize);
             }
             else
             {
-                // If there are fewer items than the page size, don't apply pagination
                 ViewBag.TotalItems = totalItems;
                 ViewBag.TotalPages = 1;
                 ViewBag.CurrentPage = 1;
             }
 
             var transactions = await query
-                .Include(t => t.Category)  // Include related category
+                .Include(t => t.Category)
+                .OrderByDescending(t => t.TransactionId)
                 .ToListAsync();
 
             ViewBag.StartDate = startDate?.ToString("yyyy-MM-dd");
@@ -98,15 +97,13 @@ namespace ExpenseTracker.Controllers
             {
                 return NotFound();
             }
-
-            // Return a partial view with transaction details
             return PartialView("_TransactionDetails", transaction);
         }
 
         //Download Excel File
         public async Task<IActionResult> DownloadExcel(DateOnly? startDate = null, DateOnly? endDate = null)
         {
-            // Retrieve username from session
+           
             var username = HttpContext.Session.GetString("Username");
 
             if (username == null)
@@ -379,13 +376,11 @@ namespace ExpenseTracker.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteSelected(List<int> selectedTransactions)
         {
-            // Ensure that selectedTransactions is not null
             if (selectedTransactions == null || selectedTransactions.Count == 0)
             {
                 return RedirectToAction("Index");
             }
-
-            // Fetch the transactions that are selected for deletion
+           
             var transactionsToDelete = await _context.Transactions
                 .Where(t => selectedTransactions.Contains(t.TransactionId))
                 .ToListAsync();
