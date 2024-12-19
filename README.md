@@ -134,24 +134,25 @@ Step 3# Update Connection String in appsettings.json
 ##Website Design
 
 #Register Page
-![register](https://github.com/user-attachments/assets/5de41e12-52bc-433b-be29-d823a47f2ef8)
+![register](https://github.com/user-attachments/assets/bb765201-debe-4a46-a3c1-0a8b7c13b14e)
 
 #Login Page
-![login](https://github.com/user-attachments/assets/8120c6c8-b1d2-4df5-8925-7ab205e56802)
+![login](https://github.com/user-attachments/assets/af06b6ca-e81b-4dd8-83dd-9a0c7631ea4d)
+
+#Forgot Password Page
+![forgot](https://github.com/user-attachments/assets/081f6e66-14ae-4eeb-b481-d2755a07292d)
 
 #Profile Page
-![profile](https://github.com/user-attachments/assets/5c2e77ee-d930-4183-9dc6-d4bca2ddacb1)
+![profile](https://github.com/user-attachments/assets/f73edc30-1c8f-40a4-8526-1b7435df9b5a)
 
 #Dashboard Page
-![dashboard](https://github.com/user-attachments/assets/a51d3d90-bf2b-4c00-81af-4a87a33c6aba)
+![dashboard](https://github.com/user-attachments/assets/62d6bff6-64ec-437b-bc91-db1dc0869179)
 
 #Category Page
-![category](https://github.com/user-attachments/assets/0bb277c2-5e02-4cfd-97de-e6e586178e72)
+![category](https://github.com/user-attachments/assets/7ba26d39-d9d3-4327-b13c-d045260405cc)
 
 #Transaction Page
-![transaction](https://github.com/user-attachments/assets/16a0894c-328e-47a1-af51-37bb2a1621bd)
-
-
+![transaction](https://github.com/user-attachments/assets/ceb39d3b-6a95-44d9-a587-a8d7e2ab4d9d)
 
 
 
