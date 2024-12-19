@@ -8,9 +8,9 @@ wwwroot\images\expense.png
 wwwroot\images\fcc8f6f9-20bd-4a5a-abaf-ca8bf6daf0cf_izumi.jpg
 wwwroot\images\forgot.jpg
 wwwroot\images\income.png
+wwwroot\images\japanese.jpg
 wwwroot\images\login.jpg
 wwwroot\images\registration.gif
-wwwroot\images\wallpaper - Copy.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

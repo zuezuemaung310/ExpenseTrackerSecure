@@ -31,15 +31,15 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="Index"> <i class="fa-solid fa-chart-line text-primary"></i>&nbsp;Dashboard</a>
+                            <a class="nav-link text-dark ps-3" asp-area="" asp-controller="Dashboard" asp-action="Index"> <i class="fa-solid fa-chart-line text-primary"></i>&nbsp;Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Transaction" asp-action="Index"><i class="fa-solid fa-plus text-success"></i>&nbsp;Transaction</a>
                         </li>
                         <li class="nav-item">
 
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index"><i class="fa-solid fa-folder-closed text-danger"></i> &nbsp;Category</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Transaction" asp-action="Index"><i class="fa-solid fa-arrow-right-arrow-left text-success"></i>&nbsp;Transaction</a>
-                        </li>
+                            <a class="nav-link text-dark px-3" asp-area="" asp-controller="Category" asp-action="Index"><i class="fa-solid fa-folder-closed text-danger"></i> &nbsp;Category</a>
+                        </li>          
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         @if (ViewData["Username"] == null)

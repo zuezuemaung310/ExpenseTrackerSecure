@@ -238,7 +238,13 @@ namespace ExpenseTracker.Controllers
                                        .Select(u => u.UserId)
                                        .FirstOrDefaultAsync();
 
-            transaction.UserId = userId;  // Set the UserId before saving
+            transaction.UserId = userId;
+
+            if (transaction.Date > DateOnly.FromDateTime(DateTime.Today))
+            {
+                ModelState.AddModelError("Date", "You cannot select a future date.");
+            }
+
 
             if (ModelState.IsValid)
             {
@@ -282,7 +288,6 @@ namespace ExpenseTracker.Controllers
             var user = _context.Users.FirstOrDefault(u => u.Username == username);
             if (user != null)
             {
-
                 ViewData["Username"] = user.Username;
                 ViewData["UserImagePath"] = user.ImagePath;
             }

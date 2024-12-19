@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iJtVjYOZNz/VCmF0edwqJbvOpeS2lswePh7GxOkwpYY=",
+  "Hash": "7FBz9rtrpLJHJSMKHjbeK+0LSoqSWbZ9Fb9kCslgBfY=",
   "Source": "ExpenseTracker",
   "BasePath": "_content/ExpenseTracker",
   "Mode": "Default",
@@ -269,6 +269,27 @@
       "OriginalItemSpec": "wwwroot\\images\\income.png"
     },
     {
+      "Identity": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\japanese.jpg",
+      "SourceId": "ExpenseTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\",
+      "BasePath": "_content/ExpenseTracker",
+      "RelativePath": "images/japanese#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4na4gp01s2",
+      "Integrity": "IJ1WS1DZSP/WVUUp1WORm5BAmpMO3lC+d9IYXqLVduQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\japanese.jpg"
+    },
+    {
       "Identity": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\login.jpg",
       "SourceId": "ExpenseTracker",
       "SourceType": "Discovered",
@@ -309,27 +330,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\registration.gif"
-    },
-    {
-      "Identity": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\wallpaper - Copy.jpg",
-      "SourceId": "ExpenseTracker",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\",
-      "BasePath": "_content/ExpenseTracker",
-      "RelativePath": "images/wallpaper - Copy#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "sx63nx5zmn",
-      "Integrity": "IA9hacQmk3uZyt76hilWSaagzpN9VZtzONWMgP2qjgY=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\wallpaper - Copy.jpg"
     },
     {
       "Identity": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\js\\site.js",
@@ -2536,6 +2536,88 @@
       ]
     },
     {
+      "Route": "images/japanese.4na4gp01s2.jpg",
+      "AssetFile": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\japanese.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37309"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IJ1WS1DZSP/WVUUp1WORm5BAmpMO3lC+d9IYXqLVduQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Dec 2024 03:34:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4na4gp01s2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/japanese.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IJ1WS1DZSP/WVUUp1WORm5BAmpMO3lC+d9IYXqLVduQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/japanese.jpg",
+      "AssetFile": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\japanese.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37309"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IJ1WS1DZSP/WVUUp1WORm5BAmpMO3lC+d9IYXqLVduQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Dec 2024 03:34:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IJ1WS1DZSP/WVUUp1WORm5BAmpMO3lC+d9IYXqLVduQ="
+        }
+      ]
+    },
+    {
       "Route": "images/login.8tay3rec1o.jpg",
       "AssetFile": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\login.jpg",
       "Selectors": [],
@@ -2696,88 +2778,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-ZN7na/AEtLQJZb2zsj4fDWg8LglfX56eTcoy9IlR2a0="
-        }
-      ]
-    },
-    {
-      "Route": "images/wallpaper - Copy.jpg",
-      "AssetFile": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\wallpaper - Copy.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "118485"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"IA9hacQmk3uZyt76hilWSaagzpN9VZtzONWMgP2qjgY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 09:56:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-IA9hacQmk3uZyt76hilWSaagzpN9VZtzONWMgP2qjgY="
-        }
-      ]
-    },
-    {
-      "Route": "images/wallpaper - Copy.sx63nx5zmn.jpg",
-      "AssetFile": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\wallpaper - Copy.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "118485"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"IA9hacQmk3uZyt76hilWSaagzpN9VZtzONWMgP2qjgY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 09:56:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "sx63nx5zmn"
-        },
-        {
-          "Name": "label",
-          "Value": "images/wallpaper - Copy.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-IA9hacQmk3uZyt76hilWSaagzpN9VZtzONWMgP2qjgY="
         }
       ]
     },

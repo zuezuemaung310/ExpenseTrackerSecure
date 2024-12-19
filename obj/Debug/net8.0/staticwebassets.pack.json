@@ -45,16 +45,16 @@
       "PackagePath": "staticwebassets\\images\\income.png"
     },
     {
+      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\japanese.jpg",
+      "PackagePath": "staticwebassets\\images\\japanese.jpg"
+    },
+    {
       "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\login.jpg",
       "PackagePath": "staticwebassets\\images\\login.jpg"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\registration.gif",
       "PackagePath": "staticwebassets\\images\\registration.gif"
-    },
-    {
-      "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\images\\wallpaper - Copy.jpg",
-      "PackagePath": "staticwebassets\\images\\wallpaper - Copy.jpg"
     },
     {
       "Id": "D:\\Fellowship\\C# project\\Expense Tracker Secure\\ExpenseTrackerSecure\\wwwroot\\js\\site.js",

@@ -41,20 +41,27 @@ else if (TempData["DeleteTransaction"] != null)
         <div class="row pb-3">
 			<div class="col-11">
                 <form method="get" action="" class="col-12 d-flex align-items-center ">
-                    <div class="form-group d-flex px-3">
+                    <div class="form-group d-flex px-2">
                         <label for="startDate" class="text-dark text-start pt-2 px-2">Start_Date </label>
-                        <input type="date" name="startDate" id="startDate" class="form-control" />
+                        <input type="date" name="startDate" id="startDate" class="form-control"
+                               value="@ViewBag.StartDate" />
                     </div>
 
-                    <div class="form-group d-flex px-3">
+                    <div class="form-group d-flex px-2">
                         <label for="endDate" class="text-dark text-start pt-2 px-2">End_Date </label>
-                        <input type="date" name="endDate" id="endDate" class="form-control" />
+                        <input type="date" name="endDate" id="endDate" class="form-control"
+                               value="@ViewBag.EndDate" />
                     </div>
 
-                    <div class="form-group mr-4 px-3 ">
-                        <button type="submit" class="btn btn-primary px-3 d-inline">
+                    <div class="form-group d-flex px-2 ">
+                        <button type="submit" class="btn btn-primary px-3 ">
                             <i class="fa-solid fa-magnifying-glass text-white"></i>
                         </button>
+                    </div>
+                    <div class="form-group d-flex px-2">
+                        <a href="@Url.Action("Index", "Transaction")" class="btn btn-info px-3 text-white">
+                            <i class="fa-solid fa-eye"></i> View All
+                        </a>
                     </div>
                 </form>
             </div>
@@ -75,9 +82,7 @@ else if (TempData["DeleteTransaction"] != null)
                     <thead class="table-success">
                         <tr>
                             <th>
-                                <button type="submit" class="btn text-danger" id="deleteSelectedBtn">
-                                    <i class="fa-solid fa-trash-can"></i>
-                                </button>
+                               
                             </th>
                             <th>Category</th>
                             <th>@Html.DisplayNameFor(model => model.Amount)</th>
@@ -85,7 +90,11 @@ else if (TempData["DeleteTransaction"] != null)
                             <th>Image</th>
                             <th>@Html.DisplayNameFor(model => model.PaymentMethod)</th>
                             <th>@Html.DisplayNameFor(model => model.Note)</th>
-                            <th>Actions</th>
+                            <th>
+                                <button type="submit" class="btn btn-danger text-white" id="deleteSelectedBtn">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -116,13 +125,13 @@ else if (TempData["DeleteTransaction"] != null)
                                 </td>
                                 <td>@Html.DisplayFor(modelItem => item.PaymentMethod)</td>
                                 <td>@Html.DisplayFor(modelItem => item.Note)</td>
-                                <td>
+                                <td class="text-center">
                                     <a asp-action="Edit" asp-route-id="@item.TransactionId" class="text-danger text-decoration-none">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
-                                    <a asp-action="Delete" asp-route-id="@item.TransactionId" class="btn btn-sm text-decoration-none text-danger">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                    </a>
+                                    @* <a asp-action="Delete" asp-route-id="@item.TransactionId" class="btn btn-sm text-decoration-none text-danger"> *@
+                                    @*     <i class="fa-solid fa-trash-can"></i> *@
+                                    @* </a> *@
                                 </td>
                             </tr>
                         }
