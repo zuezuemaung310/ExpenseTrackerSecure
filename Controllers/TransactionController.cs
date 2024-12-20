@@ -330,7 +330,6 @@ namespace ExpenseTracker.Controllers
                 {
                     if (ImageFile != null)
                     {
-                        // If a new image is uploaded, delete the old image if it exists
                         if (!string.IsNullOrEmpty(transaction.ImagePath))
                         {
                             var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", transaction.ImagePath.TrimStart('/'));
@@ -340,7 +339,6 @@ namespace ExpenseTracker.Controllers
                             }
                         }
 
-                        // Save the new image
                         var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", ImageFile.FileName);
                         using (var stream = new FileStream(filePath, FileMode.Create))
                         {
@@ -349,7 +347,6 @@ namespace ExpenseTracker.Controllers
                         transaction.ImagePath = "/images/" + ImageFile.FileName;
                     }
 
-                    // Update the transaction (this will save the ImagePath if it's unchanged or updated)
                     _context.Update(transaction);
                     await _context.SaveChangesAsync();
                 }

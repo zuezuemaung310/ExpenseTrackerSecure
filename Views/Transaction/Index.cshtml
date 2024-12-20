@@ -158,7 +158,6 @@ else if (TempData["DeleteTransaction"] != null)
             {
                 <nav class="pt-3">
                     <ul class="pagination justify-content-end">
-                        <!-- Previous Page -->
                         @if (ViewBag.CurrentPage > 1)
                         {
                             <li class="page-item">
@@ -230,32 +229,26 @@ else if (TempData["DeleteTransaction"] != null)
     </div>
  </div>
         <script>
-            // Add click event to rows
             document.querySelectorAll(".transaction-row").forEach((row) => {
                 row.addEventListener("click", function (event) {
-                    // Ignore clicks on checkboxes
                     if (event.target.tagName.toLowerCase() === "input" && event.target.type === "checkbox") {
                         return;
                     }
 
-                    // Get the transaction ID from the data-id attribute
                     const transactionId = this.getAttribute("data-id");
 
-                    // Fetch and show transaction details
                     showTransactionDetails(transactionId);
                 });
             });
 
-            // Function to fetch transaction details and display the modal
             function showTransactionDetails(transactionId) {
                 $.ajax({
                     url: `/Transaction/Details/${transactionId}`,
                     type: "GET",
                     success: function (data) {
-                        // Populate modal with fetched details
+                        
                         $("#transactionDetails").html(data);
 
-                        // Show the modal
                         $("#transactionModal").modal("show");
                     },
                     error: function () {
